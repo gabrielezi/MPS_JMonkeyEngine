@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/Engine/Engine.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Engine/runtime/Engine.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Engine/sandbox/Engine.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>

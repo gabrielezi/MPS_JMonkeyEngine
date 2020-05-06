@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="Engine.sandbox.Ye">
+    <classNode dependClassName="com.jme3.material.Material" />
+    <classNode dependClassName="com.jme3.math.ColorRGBA" />
+    <classNode dependClassName="com.jme3.scene.Geometry" />
+    <classNode dependClassName="com.jme3.scene.shape.Box" />
+    <classNode dependClassName="com.jme3.system.AppSettings" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="com.jme3.app.SimpleApplication" />
+  </dependency>
+</dependenciesRoot>
+

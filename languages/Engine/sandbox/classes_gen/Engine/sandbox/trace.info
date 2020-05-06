@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root nodeRef="r:6175e6e7-40aa-4f0d-8428-f5be3bfa59d6(Engine.sandbox)/3668570148122636406">
+    <file name="Ye.java">
+      <node id="3668570148122636406" at="13,42,14,22" concept="2" />
+      <node id="3668570148122636406" at="14,22,15,49" concept="2" />
+      <node id="3668570148122636406" at="15,49,16,28" concept="0" />
+      <node id="3668570148122636406" at="16,28,17,30" concept="0" />
+      <node id="3668570148122636406" at="17,30,18,16" concept="0" />
+      <node id="3668570148122636406" at="21,31,22,29" concept="2" />
+      <node id="3668570148122636406" at="22,29,23,43" concept="2" />
+      <node id="3668570148122636406" at="23,43,24,0" concept="3" />
+      <node id="3668570148122636406" at="24,0,25,83" concept="2" />
+      <node id="3668570148122636406" at="25,83,26,42" concept="0" />
+      <node id="3668570148122636406" at="26,42,27,26" concept="0" />
+      <node id="3668570148122636406" at="27,26,28,0" concept="3" />
+      <node id="3668570148122636406" at="28,0,29,31" concept="0" />
+      <node id="3668570148122636406" at="13,0,20,0" concept="4" trace="main#([Ljava/lang/String;)V" />
+      <node id="3668570148122636406" at="20,0,31,0" concept="1" trace="simpleInitApp#()V" />
+      <scope id="3668570148122636406" at="13,42,18,16">
+        <var name="app" id="3668570148122636406" />
+        <var name="settings" id="3668570148122636406" />
+      </scope>
+      <scope id="3668570148122636406" at="13,0,20,0">
+        <var name="args" id="3668570148122636406" />
+      </scope>
+      <scope id="3668570148122636406" at="21,31,29,31">
+        <var name="b" id="3668570148122636406" />
+        <var name="geom" id="3668570148122636406" />
+        <var name="mat" id="3668570148122636406" />
+      </scope>
+      <scope id="3668570148122636406" at="20,0,31,0" />
+      <unit id="3668570148122636406" at="12,0,32,0" name="Engine.sandbox.Ye" />
+    </file>
+  </root>
+</debug-info>
+
