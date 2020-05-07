@@ -20,6 +20,8 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 0:
         return Collections.<ConceptEditor>singletonList(new GameScreen_Editor());
       case 1:
+        return Collections.<ConceptEditor>singletonList(new TerrainSize_Editor());
+      case 2:
         return Collections.<ConceptEditor>singletonList(new Wall_Editor());
       default:
     }
@@ -28,5 +30,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x32e9611ce0719032L), MetaIdFactory.conceptId(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x361cd51a7dc58055L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x32e9611ce0719032L), MetaIdFactory.conceptId(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x3e29fbb4be9b80d1L), MetaIdFactory.conceptId(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x361cd51a7dc58055L)).seal();
 }

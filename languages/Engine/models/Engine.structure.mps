@@ -54,6 +54,13 @@
     <node concept="PrWs8" id="3bDohNwsxkK" role="PzmwI">
       <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
     </node>
+    <node concept="1TJgyj" id="3SDYViYBPdq" role="1TKVEi">
+      <property role="IQ2ns" value="4479388058107466586" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="terrainSize" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3SDYViYAS3h" resolve="TerrainSize" />
+    </node>
     <node concept="1TJgyj" id="3SDYViY$hJK" role="1TKVEi">
       <property role="IQ2ns" value="4479388058106534896" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -75,6 +82,22 @@
     <node concept="1TJgyi" id="3SDYViY$hBd" role="1TKVEl">
       <property role="IQ2nx" value="4479388058106534349" />
       <property role="TrG5h" value="zvalue" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3SDYViYAS3h">
+    <property role="EcuMT" value="4479388058107216081" />
+    <property role="TrG5h" value="TerrainSize" />
+    <property role="34LRSv" value="terrainSize" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3SDYViYAS3i" role="1TKVEl">
+      <property role="IQ2nx" value="4479388058107216082" />
+      <property role="TrG5h" value="width" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="3SDYViYBPcj" role="1TKVEl">
+      <property role="IQ2nx" value="4479388058107466515" />
+      <property role="TrG5h" value="length" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>

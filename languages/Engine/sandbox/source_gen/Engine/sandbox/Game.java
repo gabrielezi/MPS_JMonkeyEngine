@@ -30,7 +30,7 @@ import com.jme3.input.controls.KeyTrigger;
 import com.jme3.input.KeyInput;
 import com.jme3.bullet.collision.PhysicsCollisionEvent;
 
-public class Ye extends SimpleApplication implements ActionListener, PhysicsCollisionListener, AnimEventListener {
+public class Game extends SimpleApplication implements ActionListener, PhysicsCollisionListener, AnimEventListener {
 
   private BulletAppState bulletAppState;
   /*package*/ CharacterControl character;
@@ -62,7 +62,7 @@ public class Ye extends SimpleApplication implements ActionListener, PhysicsColl
   /*package*/ Box box = new Box(brickLength, brickHeight, brickWidth);
 
   public static void main(String[] args) {
-    Ye app = new Ye();
+    Game app = new Game();
     app.start();
   }
   @Override
@@ -97,6 +97,11 @@ public class Ye extends SimpleApplication implements ActionListener, PhysicsColl
     createWall(5, 5);
     createWall(4, 5);
     createWall(3, 5);
+    createWall(3, 3);
+    createWall(2, 3);
+    createWall(1, 3);
+    createWall(1, 4);
+    createWall(1, 5);
     createCharacter();
     setupChaseCamera();
     setupAnimationController();
@@ -113,7 +118,7 @@ public class Ye extends SimpleApplication implements ActionListener, PhysicsColl
   public void createCharacter() {
     CapsuleCollisionShape capsule = new CapsuleCollisionShape(3.0f, 4.0f);
     character = new CharacterControl(capsule, 0.01f);
-    model = as_13q_a0a2a43((assetManager.loadModel("Models/Oto/OtoOldAnim.j3o")), Node.class);
+    model = as_npc9_a0a2a43((assetManager.loadModel("Models/Oto/OtoOldAnim.j3o")), Node.class);
     model.addControl(character);
     character.setPhysicsLocation(new Vector3f(0, 0, 0));
     rootNode.attachChild(model);
@@ -133,8 +138,11 @@ public class Ye extends SimpleApplication implements ActionListener, PhysicsColl
   private PhysicsSpace getPhysicsSpace() {
     return bulletAppState.getPhysicsSpace();
   }
+  public void setFloorSize(float width, float length) {
+    floor = new Box(width, 0.1f, length);
+  }
   public void createFloor() {
-    floor = new Box(100.0f, 0.1f, 100.0f);
+    setFloorSize(200, 200);
     floor.scaleTextureCoordinates(new Vector2f(10, 10));
     floor_mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
     TextureKey key3 = new TextureKey("Textures/Terrain/splat/grass.jpg");
@@ -260,7 +268,7 @@ public class Ye extends SimpleApplication implements ActionListener, PhysicsColl
   @Override
   public void onAnimCycleDone(AnimControl control, AnimChannel channel, String string) {
   }
-  private static <T> T as_13q_a0a2a43(Object o, Class<T> type) {
+  private static <T> T as_npc9_a0a2a43(Object o, Class<T> type) {
     return (type.isInstance(o) ? (T) o : null);
   }
 }

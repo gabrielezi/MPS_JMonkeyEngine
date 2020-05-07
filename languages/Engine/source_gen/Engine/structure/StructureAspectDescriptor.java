@@ -15,6 +15,7 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptGameScreen = createDescriptorForGameScreen();
+  /*package*/ final ConceptDescriptor myConceptTerrainSize = createDescriptorForTerrainSize();
   /*package*/ final ConceptDescriptor myConceptWall = createDescriptorForWall();
   private final LanguageConceptSwitch myIndexSwitch;
 
@@ -30,7 +31,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptGameScreen, myConceptWall);
+    return Arrays.asList(myConceptGameScreen, myConceptTerrainSize, myConceptWall);
   }
 
   @Override
@@ -39,6 +40,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.GameScreen:
         return myConceptGameScreen;
+      case LanguageConceptSwitch.TerrainSize:
+        return myConceptTerrainSize;
       case LanguageConceptSwitch.Wall:
         return myConceptWall;
       default:
@@ -62,7 +65,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x4caf0310491e41f5L, 0x8a9b2006b3a94898L, 0x40c1a7cb987d20d5L);
     b.origin("r:81172e8e-82d2-4218-ae57-67b41c3914cc(Engine.structure)/3668570148122497074");
     b.version(2);
+    b.aggregate("terrainSize", 0x3e29fbb4be9f535aL).target(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x3e29fbb4be9b80d1L).optional(false).ordered(true).multiple(false).origin("4479388058107466586").done();
     b.aggregate("walls", 0x3e29fbb4be911bf0L).target(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x361cd51a7dc58055L).optional(true).ordered(true).multiple(true).origin("4479388058106534896").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTerrainSize() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Engine", "TerrainSize", 0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x3e29fbb4be9b80d1L);
+    b.class_(false, false, false);
+    b.origin("r:81172e8e-82d2-4218-ae57-67b41c3914cc(Engine.structure)/4479388058107216081");
+    b.version(2);
+    b.property("width", 0x3e29fbb4be9b80d2L).type(PrimitiveTypeId.INTEGER).origin("4479388058107216082").done();
+    b.property("length", 0x3e29fbb4be9f5313L).type(PrimitiveTypeId.INTEGER).origin("4479388058107466515").done();
+    b.alias("terrainSize");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWall() {

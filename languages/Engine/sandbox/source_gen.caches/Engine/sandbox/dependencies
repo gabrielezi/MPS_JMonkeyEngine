@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="Engine.sandbox.Ye">
+  <dependency className="Engine.sandbox.Game">
     <classNode dependClassName="com.jme3.animation.AnimChannel" />
     <classNode dependClassName="com.jme3.animation.AnimControl" />
     <classNode dependClassName="com.jme3.asset.TextureKey" />

@@ -14,11 +14,16 @@
       </concept>
     </language>
     <language id="1d3f8ae8-4176-495b-a865-86bf89ca816c" name="Engine">
+      <concept id="4479388058107216081" name="Engine.structure.TerrainSize" flags="ng" index="20GBH_">
+        <property id="4479388058107216082" name="width" index="20GBHA" />
+        <property id="4479388058107466515" name="length" index="20HEyB" />
+      </concept>
       <concept id="3899225687151968341" name="Engine.structure.Wall" flags="ng" index="1bQllf">
         <property id="4479388058106534349" name="zvalue" index="20Ie9T" />
         <property id="4479388058106534266" name="xvalue" index="20Iebe" />
       </concept>
       <concept id="3668570148122497074" name="Engine.structure.GameScreen" flags="ng" index="3iAf4I">
+        <child id="4479388058107466586" name="terrainSize" index="20HEzI" />
         <child id="4479388058106534896" name="walls" index="20Ie14" />
       </concept>
     </language>
@@ -100,6 +105,30 @@
     <node concept="1bQllf" id="3SDYViYABbA" role="20Ie14">
       <property role="20Iebe" value="3" />
       <property role="20Ie9T" value="5" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYARDr" role="20Ie14">
+      <property role="20Iebe" value="3" />
+      <property role="20Ie9T" value="3" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYARF1" role="20Ie14">
+      <property role="20Iebe" value="2" />
+      <property role="20Ie9T" value="3" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYARGC" role="20Ie14">
+      <property role="20Iebe" value="1" />
+      <property role="20Ie9T" value="3" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYARIg" role="20Ie14">
+      <property role="20Iebe" value="1" />
+      <property role="20Ie9T" value="4" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYARJT" role="20Ie14">
+      <property role="20Iebe" value="1" />
+      <property role="20Ie9T" value="5" />
+    </node>
+    <node concept="20GBH_" id="3SDYViYCiSP" role="20HEzI">
+      <property role="20GBHA" value="100" />
+      <property role="20HEyB" value="100" />
     </node>
   </node>
 </model>
