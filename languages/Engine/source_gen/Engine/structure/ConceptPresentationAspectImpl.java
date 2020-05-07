@@ -10,6 +10,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_GameScreen;
+  private ConceptPresentation props_Wall;
 
   @Override
   @Nullable
@@ -23,6 +24,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GameScreen = cpb.create();
         }
         return props_GameScreen;
+      case LanguageConceptSwitch.Wall:
+        if (props_Wall == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("wall");
+          props_Wall = cpb.create();
+        }
+        return props_Wall;
     }
     return null;
   }

@@ -11,9 +11,11 @@ import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
+import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptGameScreen = createDescriptorForGameScreen();
+  /*package*/ final ConceptDescriptor myConceptWall = createDescriptorForWall();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -28,7 +30,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptGameScreen);
+    return Arrays.asList(myConceptGameScreen, myConceptWall);
   }
 
   @Override
@@ -37,6 +39,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.GameScreen:
         return myConceptGameScreen;
+      case LanguageConceptSwitch.Wall:
+        return myConceptWall;
       default:
         return null;
     }
@@ -58,6 +62,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x4caf0310491e41f5L, 0x8a9b2006b3a94898L, 0x40c1a7cb987d20d5L);
     b.origin("r:81172e8e-82d2-4218-ae57-67b41c3914cc(Engine.structure)/3668570148122497074");
     b.version(2);
+    b.aggregate("walls", 0x3e29fbb4be911bf0L).target(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x361cd51a7dc58055L).optional(true).ordered(true).multiple(true).origin("4479388058106534896").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForWall() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Engine", "Wall", 0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x361cd51a7dc58055L);
+    b.class_(false, false, false);
+    b.origin("r:81172e8e-82d2-4218-ae57-67b41c3914cc(Engine.structure)/3899225687151968341");
+    b.version(2);
+    b.property("xvalue", 0x3e29fbb4be91197aL).type(PrimitiveTypeId.INTEGER).origin("4479388058106534266").done();
+    b.property("zvalue", 0x3e29fbb4be9119cdL).type(PrimitiveTypeId.INTEGER).origin("4479388058106534349").done();
+    b.alias("wall");
     return b.create();
   }
 }

@@ -14,11 +14,93 @@
       </concept>
     </language>
     <language id="1d3f8ae8-4176-495b-a865-86bf89ca816c" name="Engine">
-      <concept id="3668570148122497074" name="Engine.structure.GameScreen" flags="ng" index="3iAf4I" />
+      <concept id="3899225687151968341" name="Engine.structure.Wall" flags="ng" index="1bQllf">
+        <property id="4479388058106534349" name="zvalue" index="20Ie9T" />
+        <property id="4479388058106534266" name="xvalue" index="20Iebe" />
+      </concept>
+      <concept id="3668570148122497074" name="Engine.structure.GameScreen" flags="ng" index="3iAf4I">
+        <child id="4479388058106534896" name="walls" index="20Ie14" />
+      </concept>
     </language>
   </registry>
   <node concept="3iAf4I" id="3bDohNwsV1Q">
-    <property role="TrG5h" value="Ye" />
+    <property role="TrG5h" value="Game" />
+    <node concept="1bQllf" id="3SDYViY$$Su" role="20Ie14">
+      <property role="20Iebe" value="0" />
+      <property role="20Ie9T" value="0" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAlaC" role="20Ie14">
+      <property role="20Iebe" value="0" />
+      <property role="20Ie9T" value="1" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYA_KJ" role="20Ie14">
+      <property role="20Iebe" value="2" />
+      <property role="20Ie9T" value="0" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYA_M4" role="20Ie14">
+      <property role="20Iebe" value="1" />
+      <property role="20Ie9T" value="2" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYA_Nq" role="20Ie14">
+      <property role="20Iebe" value="2" />
+      <property role="20Ie9T" value="2" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYA_OL" role="20Ie14">
+      <property role="20Iebe" value="3" />
+      <property role="20Ie9T" value="0" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAAaV" role="20Ie14">
+      <property role="20Iebe" value="3" />
+      <property role="20Ie9T" value="2" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAAck" role="20Ie14">
+      <property role="20Iebe" value="4" />
+      <property role="20Ie9T" value="3" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAAdI" role="20Ie14">
+      <property role="20Iebe" value="4" />
+      <property role="20Ie9T" value="0" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAAeI" role="20Ie14">
+      <property role="20Iebe" value="5" />
+      <property role="20Ie9T" value="0" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAAg_" role="20Ie14">
+      <property role="20Iebe" value="5" />
+      <property role="20Ie9T" value="1" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAAB8" role="20Ie14">
+      <property role="20Iebe" value="6" />
+      <property role="20Ie9T" value="1" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAACb" role="20Ie14">
+      <property role="20Iebe" value="6" />
+      <property role="20Ie9T" value="2" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAAEw" role="20Ie14">
+      <property role="20Iebe" value="6" />
+      <property role="20Ie9T" value="3" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAB1i" role="20Ie14">
+      <property role="20Iebe" value="6" />
+      <property role="20Ie9T" value="4" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAB4F" role="20Ie14">
+      <property role="20Iebe" value="6" />
+      <property role="20Ie9T" value="5" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAB6d" role="20Ie14">
+      <property role="20Iebe" value="5" />
+      <property role="20Ie9T" value="5" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYAB8b" role="20Ie14">
+      <property role="20Iebe" value="4" />
+      <property role="20Ie9T" value="5" />
+    </node>
+    <node concept="1bQllf" id="3SDYViYABbA" role="20Ie14">
+      <property role="20Iebe" value="3" />
+      <property role="20Ie9T" value="5" />
+    </node>
   </node>
 </model>
 

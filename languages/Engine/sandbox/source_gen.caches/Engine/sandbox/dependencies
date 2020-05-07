@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="Engine.sandbox.Ye">
+    <classNode dependClassName="com.jme3.animation.AnimChannel" />
+    <classNode dependClassName="com.jme3.animation.AnimControl" />
+    <classNode dependClassName="com.jme3.asset.TextureKey" />
+    <classNode dependClassName="com.jme3.bullet.BulletAppState" />
+    <classNode dependClassName="com.jme3.bullet.PhysicsSpace" />
+    <classNode dependClassName="com.jme3.bullet.collision.PhysicsCollisionEvent" />
+    <classNode dependClassName="com.jme3.bullet.collision.shapes.CapsuleCollisionShape" />
+    <classNode dependClassName="com.jme3.bullet.control.CharacterControl" />
+    <classNode dependClassName="com.jme3.bullet.control.RigidBodyControl" />
+    <classNode dependClassName="com.jme3.input.ChaseCamera" />
+    <classNode dependClassName="com.jme3.input.KeyInput" />
+    <classNode dependClassName="com.jme3.input.controls.KeyTrigger" />
+    <classNode dependClassName="com.jme3.light.DirectionalLight" />
     <classNode dependClassName="com.jme3.material.Material" />
     <classNode dependClassName="com.jme3.math.ColorRGBA" />
+    <classNode dependClassName="com.jme3.math.Vector2f" />
+    <classNode dependClassName="com.jme3.math.Vector3f" />
     <classNode dependClassName="com.jme3.scene.Geometry" />
+    <classNode dependClassName="com.jme3.scene.Node" />
+    <classNode dependClassName="com.jme3.scene.Spatial" />
     <classNode dependClassName="com.jme3.scene.shape.Box" />
-    <classNode dependClassName="com.jme3.system.AppSettings" />
+    <classNode dependClassName="com.jme3.texture.Texture" />
+    <classNode dependClassName="com.jme3.util.SkyFactory" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="com.jme3.animation.AnimEventListener" />
     <classNode extendsClassName="com.jme3.app.SimpleApplication" />
+    <classNode extendsClassName="com.jme3.bullet.collision.PhysicsCollisionListener" />
+    <classNode extendsClassName="com.jme3.input.controls.ActionListener" />
   </dependency>
 </dependenciesRoot>
 
