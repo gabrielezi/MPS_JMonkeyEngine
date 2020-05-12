@@ -142,7 +142,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
     floor = new Box(width, 0.1f, length);
   }
   public void createFloor() {
-    setFloorSize(200, 200);
+    setFloorSize(100, 100);
     floor.scaleTextureCoordinates(new Vector2f(10, 10));
     floor_mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
     TextureKey key3 = new TextureKey("Textures/Terrain/splat/grass.jpg");
