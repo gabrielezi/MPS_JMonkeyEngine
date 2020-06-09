@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="Engine.runtime.MyScreen">
+    <classNode dependClassName="Engine.runtime.Stats" />
+    <classNode dependClassName="com.jme3.app.Application" />
+    <classNode dependClassName="de.lessvoid.nifty.Nifty" />
+    <classNode dependClassName="de.lessvoid.nifty.controls.TextField" />
+    <classNode dependClassName="de.lessvoid.nifty.elements.Element" />
+    <classNode dependClassName="de.lessvoid.nifty.elements.render.TextRenderer" />
+    <classNode dependClassName="de.lessvoid.nifty.screen.Screen" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.NullPointerException" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode extendsClassName="com.jme3.app.state.AbstractAppState" />
+    <classNode extendsClassName="de.lessvoid.nifty.screen.ScreenController" />
+  </dependency>
+  <dependency className="Engine.runtime.Questions">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="javax.script.ScriptEngine" />
+    <classNode dependClassName="javax.script.ScriptEngineManager" />
+    <classNode dependClassName="javax.script.ScriptException" />
+  </dependency>
+  <dependency className="Engine.runtime.Stats" />
+</dependenciesRoot>
+

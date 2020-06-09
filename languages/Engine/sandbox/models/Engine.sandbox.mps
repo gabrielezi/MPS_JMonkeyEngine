@@ -3,11 +3,20 @@
   <persistence version="9" />
   <languages>
     <use id="1d3f8ae8-4176-495b-a865-86bf89ca816c" name="Engine" version="0" />
+    <use id="8fbac3a7-85ba-48f9-8845-8d9d85fd4680" name="MathTaskLanguage" version="0" />
   </languages>
   <imports>
     <import index="a480" ref="r:6f804175-74c8-45d4-becb-2a8488971bc5(Engine.runtime)" />
   </imports>
   <registry>
+    <language id="8fbac3a7-85ba-48f9-8845-8d9d85fd4680" name="MathTaskLanguage">
+      <concept id="4815033423050654419" name="MathTaskLanguage.structure.Question" flags="ng" index="1ogMQK">
+        <property id="4815033423051837111" name="task" index="1osi7k" />
+      </concept>
+      <concept id="4815033423050654420" name="MathTaskLanguage.structure.Questions" flags="ng" index="1ogMQR">
+        <child id="4815033423050654423" name="question" index="1ogMQO" />
+      </concept>
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -25,6 +34,7 @@
       <concept id="3668570148122497074" name="Engine.structure.GameScreen" flags="ng" index="3iAf4I">
         <child id="4479388058107466586" name="terrainSize" index="20HEzI" />
         <child id="4479388058106534896" name="walls" index="20Ie14" />
+        <child id="4277660428437317956" name="questions" index="3pBigU" />
       </concept>
     </language>
   </registry>
@@ -129,6 +139,15 @@
     <node concept="20GBH_" id="3SDYViYCiSP" role="20HEzI">
       <property role="20GBHA" value="100" />
       <property role="20HEyB" value="100" />
+    </node>
+    <node concept="1ogMQR" id="3HtjnVyKD_6" role="3pBigU">
+      <property role="TrG5h" value="MyQuestions" />
+      <node concept="1ogMQK" id="3HtjnVyKD_7" role="1ogMQO">
+        <property role="1osi7k" value="1*3" />
+      </node>
+      <node concept="1ogMQK" id="3HtjnVyKNsO" role="1ogMQO">
+        <property role="1osi7k" value="5*4" />
+      </node>
     </node>
   </node>
 </model>

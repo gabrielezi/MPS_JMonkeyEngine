@@ -105,6 +105,7 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="true">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
+    <dependency reexport="false">1bb459bf-d98e-43dc-a1fa-370d0a023084(Engine.sandbox)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="11" />
@@ -114,6 +115,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="9d761c95-11f4-4220-9a74-43bcaeb93203(Engine.runtime)" version="0" />
+    <module reference="1bb459bf-d98e-43dc-a1fa-370d0a023084(Engine.sandbox)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
   </dependencyVersions>
 </solution>

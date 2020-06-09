@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="Engine.sandbox.Game">
+    <classNode dependClassName="Engine.runtime.MyScreen" />
+    <classNode dependClassName="Engine.runtime.Questions" />
+    <classNode dependClassName="Engine.runtime.Stats" />
     <classNode dependClassName="com.jme3.animation.AnimChannel" />
     <classNode dependClassName="com.jme3.animation.AnimControl" />
     <classNode dependClassName="com.jme3.asset.TextureKey" />
@@ -18,13 +21,23 @@
     <classNode dependClassName="com.jme3.math.ColorRGBA" />
     <classNode dependClassName="com.jme3.math.Vector2f" />
     <classNode dependClassName="com.jme3.math.Vector3f" />
+    <classNode dependClassName="com.jme3.niftygui.NiftyJmeDisplay" />
     <classNode dependClassName="com.jme3.scene.Geometry" />
     <classNode dependClassName="com.jme3.scene.Node" />
     <classNode dependClassName="com.jme3.scene.Spatial" />
     <classNode dependClassName="com.jme3.scene.shape.Box" />
     <classNode dependClassName="com.jme3.texture.Texture" />
     <classNode dependClassName="com.jme3.util.SkyFactory" />
+    <classNode dependClassName="de.lessvoid.nifty.Nifty" />
+    <classNode dependClassName="de.lessvoid.nifty.builder.EffectBuilder" />
+    <classNode dependClassName="de.lessvoid.nifty.builder.LayerBuilder" />
+    <classNode dependClassName="de.lessvoid.nifty.builder.PanelBuilder" />
+    <classNode dependClassName="de.lessvoid.nifty.builder.ScreenBuilder" />
+    <classNode dependClassName="de.lessvoid.nifty.builder.TextBuilder" />
+    <classNode dependClassName="de.lessvoid.nifty.controls.button.builder.ButtonBuilder" />
+    <classNode dependClassName="de.lessvoid.nifty.controls.textfield.builder.TextFieldBuilder" />
     <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />

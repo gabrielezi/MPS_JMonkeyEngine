@@ -16,6 +16,18 @@ import com.jme3.input.ChaseCamera;
 import com.jme3.scene.shape.Box;
 import com.jme3.bullet.control.RigidBodyControl;
 import com.jme3.material.Material;
+import com.jme3.niftygui.NiftyJmeDisplay;
+import de.lessvoid.nifty.Nifty;
+import Engine.runtime.Questions;
+import de.lessvoid.nifty.builder.ScreenBuilder;
+import de.lessvoid.nifty.builder.LayerBuilder;
+import de.lessvoid.nifty.builder.TextBuilder;
+import Engine.runtime.Stats;
+import de.lessvoid.nifty.builder.EffectBuilder;
+import Engine.runtime.MyScreen;
+import de.lessvoid.nifty.builder.PanelBuilder;
+import de.lessvoid.nifty.controls.textfield.builder.TextFieldBuilder;
+import de.lessvoid.nifty.controls.button.builder.ButtonBuilder;
 import com.jme3.bullet.collision.shapes.CapsuleCollisionShape;
 import com.jme3.scene.Spatial;
 import com.jme3.scene.Geometry;
@@ -61,12 +73,21 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
 
   /*package*/ Box box = new Box(brickLength, brickHeight, brickWidth);
 
+  public static int questionsCounter = 0;
+  public static float previousDistance = 0;
+
+  /*package*/ NiftyJmeDisplay niftyDisplay;
+  /*package*/ Nifty nifty;
+
   public static void main(String[] args) {
     Game app = new Game();
     app.start();
   }
   @Override
   public void simpleInitApp() {
+    Questions.addQuestion("1*3");
+    Questions.addQuestion("5*4");
+
     bulletAppState = new BulletAppState();
     bulletAppState.setThreadingType(BulletAppState.ThreadingType.PARALLEL);
     stateManager.attach(bulletAppState);
@@ -74,37 +95,195 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
     mat_brick = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
     mat_brick.setTexture("ColorMap", assetManager.loadTexture("Textures/Terrain/BrickWall/BrickWall.jpg"));
 
-    setupKeys();
-    createLight();
-    createSky();
-    createFloor();
-    createWall(0, 0);
-    createWall(0, 1);
-    createWall(2, 0);
-    createWall(1, 2);
-    createWall(2, 2);
-    createWall(3, 0);
-    createWall(3, 2);
-    createWall(4, 3);
-    createWall(4, 0);
-    createWall(5, 0);
-    createWall(5, 1);
-    createWall(6, 1);
-    createWall(6, 2);
-    createWall(6, 3);
-    createWall(6, 4);
-    createWall(6, 5);
-    createWall(5, 5);
-    createWall(4, 5);
-    createWall(3, 5);
-    createWall(3, 3);
-    createWall(2, 3);
-    createWall(1, 3);
-    createWall(1, 4);
-    createWall(1, 5);
-    createCharacter();
-    setupChaseCamera();
-    setupAnimationController();
+    niftyDisplay = new NiftyJmeDisplay(assetManager, inputManager, audioRenderer, guiViewPort);
+    nifty = niftyDisplay.getNifty();
+    guiViewPort.addProcessor(niftyDisplay);
+    flyCam.setDragToRotate(true);
+
+    nifty.loadStyleFile("nifty-default-styles.xml");
+    nifty.loadControlFile("nifty-default-controls.xml");
+
+    nifty.addScreen("hud", new ScreenBuilder("hud") {
+      {
+        setupKeys();
+        createLight();
+        createSky();
+        createFloor();
+        createWall(0, 0);
+        createWall(0, 1);
+        createWall(2, 0);
+        createWall(1, 2);
+        createWall(2, 2);
+        createWall(3, 0);
+        createWall(3, 2);
+        createWall(4, 3);
+        createWall(4, 0);
+        createWall(5, 0);
+        createWall(5, 1);
+        createWall(6, 1);
+        createWall(6, 2);
+        createWall(6, 3);
+        createWall(6, 4);
+        createWall(6, 5);
+        createWall(5, 5);
+        createWall(4, 5);
+        createWall(3, 5);
+        createWall(3, 3);
+        createWall(2, 3);
+        createWall(1, 3);
+        createWall(1, 4);
+        createWall(1, 5);
+        createCharacter();
+        setupChaseCamera();
+        setupAnimationController();
+
+        layer(new LayerBuilder("top") {
+          {
+            childLayoutVertical();
+            height("70%");
+            width("70%");
+
+            text(new TextBuilder("TextStart") {
+              {
+                text("lives: " + Stats.lives + ", score: " + Stats.score);
+                font("Interface/Fonts/Default.fnt");
+                onActiveEffect(new EffectBuilder("textSize") {
+                  {
+                    effectValue("100");
+                    effectParameter("factor", "10");
+                    effectParameter("startSize", "2");
+                    effectParameter("endSize", "2");
+                    effectParameter("textSize", "1");
+                  }
+                });
+                wrap(true);
+                height("100%");
+                width("100%");
+                textHAlignLeft();
+              }
+            });
+          }
+        });
+      }
+    }.build(nifty));
+    nifty.gotoScreen("hud");
+  }
+
+  private static void createTaskScreen(final Nifty nifty) {
+    questionsCounter = (int) (Questions.questionsArray.size() * Math.random());
+    int answer = Questions.answerMap.get(Questions.questionsArray.get(questionsCounter));
+    MyScreen.setAnswer(answer);
+
+    nifty.addScreen("start", new ScreenBuilder("start") {
+      {
+        controller(new MyScreen());
+        layer(new LayerBuilder("foreground") {
+          {
+            childLayoutVertical();
+            panel(new PanelBuilder("panel_mid") {
+              {
+                childLayoutCenter();
+                alignCenter();
+                height("75%");
+                width("75%");
+
+                text(new TextBuilder() {
+                  {
+                    text(Questions.questionsArray.get(questionsCounter) + "=");
+                    font("Interface/Fonts/Default.fnt");
+                    onActiveEffect(new EffectBuilder("textSize") {
+                      {
+                        effectValue("100");
+                        effectParameter("factor", "10");
+                        effectParameter("startSize", "2");
+                        effectParameter("endSize", "2");
+                        effectParameter("textSize", "1");
+                      }
+                    });
+                    wrap(true);
+                    height("100%");
+                    width("100%");
+                  }
+                });
+              }
+            });
+            panel(new PanelBuilder("panel_bottom") {
+              {
+                childLayoutHorizontal();
+                alignCenter();
+                height("25%");
+                width("75%");
+
+                panel(new PanelBuilder("panel_bottom_left") {
+                  {
+                    childLayoutCenter();
+                    valignCenter();
+                    height("50%");
+                    width("50%");
+
+                    control(new TextFieldBuilder("TextField", "") {
+                      {
+                        alignCenter();
+                        valignCenter();
+                        height("50%");
+                        width("50%");
+                        visibleToMouse(true);
+                      }
+                    });
+                  }
+                });
+                panel(new PanelBuilder("panel_bottom_right") {
+                  {
+                    childLayoutCenter();
+                    valignCenter();
+                    width("50%");
+                    height("50%");
+
+                    control(new ButtonBuilder("StartButton", "Submit") {
+                      {
+                        alignCenter();
+                        valignCenter();
+                        height("50%");
+                        width("50%");
+                        visibleToMouse();
+                        interactOnClick("submit(hud)");
+                      }
+                    });
+                  }
+                });
+              }
+            });
+          }
+        });
+        layer(new LayerBuilder("top") {
+          {
+            childLayoutVertical();
+            height("70%");
+            width("70%");
+
+            text(new TextBuilder("Text") {
+              {
+                text("lives: " + Stats.lives + ", score: " + Stats.score);
+                font("Interface/Fonts/Default.fnt");
+                onActiveEffect(new EffectBuilder("textSize") {
+                  {
+                    effectValue("100");
+                    effectParameter("factor", "10");
+                    effectParameter("startSize", "2");
+                    effectParameter("endSize", "2");
+                    effectParameter("textSize", "1");
+                  }
+                });
+                wrap(true);
+                height("100%");
+                width("100%");
+                textHAlignLeft();
+              }
+            });
+          }
+        });
+      }
+    }.build(nifty));
   }
   private void setupAnimationController() {
     animationControl = model.getControl(AnimControl.class);
@@ -118,7 +297,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
   public void createCharacter() {
     CapsuleCollisionShape capsule = new CapsuleCollisionShape(3.0f, 4.0f);
     character = new CharacterControl(capsule, 0.01f);
-    model = as_npc9_a0a2a43((assetManager.loadModel("Models/Oto/OtoOldAnim.j3o")), Node.class);
+    model = as_npc9_a0a2a24((assetManager.loadModel("Models/Oto/OtoOldAnim.j3o")), Node.class);
     model.addControl(character);
     character.setPhysicsLocation(new Vector3f(0, 0, 0));
     rootNode.attachChild(model);
@@ -228,6 +407,13 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
       }
     }
     character.setWalkDirection(walkDirection);
+
+    float distance = model.getWorldTranslation().distance(new Vector3f(0, 0, 0));
+    if (((int) distance) % 20 == 0 && distance != previousDistance) {
+      createTaskScreen(nifty);
+      nifty.gotoScreen("start");
+    }
+    previousDistance = distance;
   }
   @Override
   public void onAction(String string, boolean b, float f) {
@@ -268,7 +454,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
   @Override
   public void onAnimCycleDone(AnimControl control, AnimChannel channel, String string) {
   }
-  private static <T> T as_npc9_a0a2a43(Object o, Class<T> type) {
+  private static <T> T as_npc9_a0a2a24(Object o, Class<T> type) {
     return (type.isInstance(o) ? (T) o : null);
   }
 }
