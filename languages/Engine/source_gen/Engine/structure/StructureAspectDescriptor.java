@@ -26,6 +26,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
+    deps.aggregatedLanguage(0x8fbac3a785ba48f9L, 0x88458d9d85fd4680L, "MathTaskLanguage");
+    deps.aggregatedLanguage(0x23c152072b1c47e1L, 0xb53641908a833633L, "FeedbackLang");
   }
 
   @Override
@@ -62,6 +64,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("terrainSize", 0x3e29fbb4be9f535aL).target(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x3e29fbb4be9b80d1L).optional(false).ordered(true).multiple(false).origin("4479388058107466586").done();
     b.aggregate("walls", 0x3e29fbb4be911bf0L).target(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x361cd51a7dc58055L).optional(true).ordered(true).multiple(true).origin("4479388058106534896").done();
+    b.aggregate("questions", 0x3b5d4d7ee2c06944L).target(0x8fbac3a785ba48f9L, 0x88458d9d85fd4680L, 0x42d26f631a9142d4L).optional(false).ordered(true).multiple(false).origin("4277660428437317956").done();
+    b.aggregate("lives", 0x4e9bf1d3d4e86fa0L).target(0x23c152072b1c47e1L, 0xb53641908a833633L, 0x4e9bf1d3d4e7e9ccL).optional(false).ordered(true).multiple(false).origin("5664386848460926880").done();
+    b.aggregate("score", 0x4e9bf1d3d4e86fa5L).target(0x23c152072b1c47e1L, 0xb53641908a833633L, 0x4e9bf1d3d4e7e942L).optional(false).ordered(true).multiple(false).origin("5664386848460926885").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTerrainSize() {

@@ -8,6 +8,8 @@
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
+    <import index="395o" ref="r:9ac3cf75-eaf9-4197-b625-5018f60fefe6(MathTaskLanguage.structure)" implicit="true" />
+    <import index="4onw" ref="r:7f07d92e-5936-4197-a9be-cd8c587890e9(FeedbackLang.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -67,6 +69,27 @@
       <property role="20kJfa" value="walls" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3osPhDXLo1l" resolve="Wall" />
+    </node>
+    <node concept="1TJgyj" id="3HtjnVyK6_4" role="1TKVEi">
+      <property role="IQ2ns" value="4277660428437317956" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="questions" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="395o:4birQcq$kbk" resolve="Questions" />
+    </node>
+    <node concept="1TJgyj" id="4UrWtfkU6Yw" role="1TKVEi">
+      <property role="IQ2ns" value="5664386848460926880" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lives" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="4onw:4UrWtfkTYBc" resolve="Lives" />
+    </node>
+    <node concept="1TJgyj" id="4UrWtfkU6Y_" role="1TKVEi">
+      <property role="IQ2ns" value="5664386848460926885" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="score" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="4onw:4UrWtfkTY_2" resolve="Score" />
     </node>
   </node>
   <node concept="1TIwiD" id="3osPhDXLo1l">
