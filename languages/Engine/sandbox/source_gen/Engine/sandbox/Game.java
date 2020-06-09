@@ -21,6 +21,7 @@ import de.lessvoid.nifty.Nifty;
 import Engine.runtime.Questions;
 import Engine.runtime.Stats;
 import de.lessvoid.nifty.builder.ScreenBuilder;
+import de.lessvoid.nifty.screen.DefaultScreenController;
 import de.lessvoid.nifty.builder.LayerBuilder;
 import de.lessvoid.nifty.builder.TextBuilder;
 import de.lessvoid.nifty.builder.EffectBuilder;
@@ -28,6 +29,7 @@ import Engine.runtime.MyScreen;
 import de.lessvoid.nifty.builder.PanelBuilder;
 import de.lessvoid.nifty.controls.textfield.builder.TextFieldBuilder;
 import de.lessvoid.nifty.controls.button.builder.ButtonBuilder;
+import de.lessvoid.nifty.builder.ImageBuilder;
 import com.jme3.bullet.collision.shapes.CapsuleCollisionShape;
 import com.jme3.scene.Spatial;
 import com.jme3.scene.Geometry;
@@ -111,6 +113,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
 
     nifty.addScreen("hud", new ScreenBuilder("hud") {
       {
+        controller(new DefaultScreenController());
         setupKeys();
         createLight();
         createSky();
@@ -155,7 +158,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
                 font("Interface/Fonts/Default.fnt");
                 onActiveEffect(new EffectBuilder("textSize") {
                   {
-                    effectValue("100");
+                    effectValue("100", "#ffffff");
                     effectParameter("factor", "10");
                     effectParameter("startSize", "2");
                     effectParameter("endSize", "2");
@@ -199,7 +202,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
                     font("Interface/Fonts/Default.fnt");
                     onActiveEffect(new EffectBuilder("textSize") {
                       {
-                        effectValue("100");
+                        effectValue("100", "#ffffff");
                         effectParameter("factor", "10");
                         effectParameter("startSize", "2");
                         effectParameter("endSize", "2");
@@ -273,7 +276,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
                 font("Interface/Fonts/Default.fnt");
                 onActiveEffect(new EffectBuilder("textSize") {
                   {
-                    effectValue("100");
+                    effectValue("100", "#ffffff");
                     effectParameter("factor", "10");
                     effectParameter("startSize", "2");
                     effectParameter("endSize", "2");
@@ -291,6 +294,86 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
       }
     }.build(nifty));
   }
+  private static void createEndScreen(final Nifty nifty) {
+    nifty.addScreen("end", new ScreenBuilder("end") {
+      {
+        controller(new DefaultScreenController());
+        layer(new LayerBuilder("background") {
+          {
+            childLayoutCenter();
+            image(new ImageBuilder() {
+              {
+                filename("Textures/Terrain/splat/fortress512.png");
+                height("100%");
+                width("100%");
+              }
+            });
+          }
+        });
+        layer(new LayerBuilder("panel_middle") {
+          {
+            childLayoutVertical();
+            panel(new PanelBuilder("panel_mid") {
+              {
+                childLayoutCenter();
+                alignCenter();
+                height("75%");
+                width("75%");
+
+                text(new TextBuilder() {
+                  {
+                    text("you ran out of lives");
+                    font("Interface/Fonts/Default.fnt");
+                    onActiveEffect(new EffectBuilder("textSize") {
+                      {
+                        effectValue("100", "#ffffff");
+                        effectParameter("factor", "10");
+                        effectParameter("startSize", "2");
+                        effectParameter("endSize", "2");
+                        effectParameter("textSize", "1");
+                      }
+                    });
+                    wrap(true);
+                    height("100%");
+                    width("100%");
+                  }
+                });
+              }
+            });
+
+          }
+        });
+        layer(new LayerBuilder("top") {
+          {
+            childLayoutVertical();
+            height("70%");
+            width("70%");
+
+            text(new TextBuilder("Text") {
+              {
+                text("lives: " + Stats.lives + ", score: " + Stats.score);
+                font("Interface/Fonts/Default.fnt");
+                onActiveEffect(new EffectBuilder("textSize") {
+                  {
+                    effectValue("100", "#ffffff");
+                    effectParameter("factor", "10");
+                    effectParameter("startSize", "2");
+                    effectParameter("endSize", "2");
+                    effectParameter("textSize", "1");
+                  }
+                });
+                wrap(true);
+                height("100%");
+                width("100%");
+                textHAlignLeft();
+              }
+            });
+          }
+        });
+      }
+    }.build(nifty));
+  }
+
   private void setupAnimationController() {
     animationControl = model.getControl(AnimControl.class);
     animationControl.addListener(this);
@@ -303,7 +386,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
   public void createCharacter() {
     CapsuleCollisionShape capsule = new CapsuleCollisionShape(3.0f, 4.0f);
     character = new CharacterControl(capsule, 0.01f);
-    model = as_npc9_a0a2a24((assetManager.loadModel("Models/Oto/OtoOldAnim.j3o")), Node.class);
+    model = as_npc9_a0a2a44((assetManager.loadModel("Models/Oto/OtoOldAnim.j3o")), Node.class);
     model.addControl(character);
     character.setPhysicsLocation(new Vector3f(0, 0, 0));
     rootNode.attachChild(model);
@@ -420,6 +503,11 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
       nifty.gotoScreen("start");
     }
     previousDistance = distance;
+
+    if (Stats.lives == 0) {
+      createEndScreen(nifty);
+      nifty.gotoScreen("end");
+    }
   }
   @Override
   public void onAction(String string, boolean b, float f) {
@@ -460,7 +548,7 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
   @Override
   public void onAnimCycleDone(AnimControl control, AnimChannel channel, String string) {
   }
-  private static <T> T as_npc9_a0a2a24(Object o, Class<T> type) {
+  private static <T> T as_npc9_a0a2a44(Object o, Class<T> type) {
     return (type.isInstance(o) ? (T) o : null);
   }
 }

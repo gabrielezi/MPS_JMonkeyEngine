@@ -5,9 +5,7 @@
     <use id="1d3f8ae8-4176-495b-a865-86bf89ca816c" name="Engine" version="0" />
     <use id="8fbac3a7-85ba-48f9-8845-8d9d85fd4680" name="MathTaskLanguage" version="0" />
   </languages>
-  <imports>
-    <import index="a480" ref="r:6f804175-74c8-45d4-becb-2a8488971bc5(Engine.runtime)" />
-  </imports>
+  <imports />
   <registry>
     <language id="8fbac3a7-85ba-48f9-8845-8d9d85fd4680" name="MathTaskLanguage">
       <concept id="4815033423050654419" name="MathTaskLanguage.structure.Question" flags="ng" index="1ogMQK">

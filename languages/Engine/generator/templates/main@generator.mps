@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="3" />
-    <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="2" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
@@ -11,7 +10,6 @@
     <import index="a480" ref="r:6f804175-74c8-45d4-becb-2a8488971bc5(Engine.runtime)" />
     <import index="6rn5" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.app(Engine.runtime/)" />
     <import index="zyfj" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.scene.shape(Engine.runtime/)" />
-    <import index="ysin" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.system(Engine.runtime/)" />
     <import index="y4t8" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.scene(Engine.runtime/)" />
     <import index="uy1j" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.material(Engine.runtime/)" />
     <import index="kg54" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.math(Engine.runtime/)" />
@@ -22,20 +20,18 @@
     <import index="velu" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.bullet(Engine.runtime/)" />
     <import index="uiap" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.bullet.control(Engine.runtime/)" />
     <import index="ng2i" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.input(Engine.runtime/)" />
-    <import index="mngw" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.post(Engine.runtime/)" />
     <import index="7fxi" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.light(Engine.runtime/)" />
     <import index="cc3k" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.asset(Engine.runtime/)" />
     <import index="38r" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.texture(Engine.runtime/)" />
     <import index="lo16" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.bullet.collision.shapes(Engine.runtime/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
     <import index="395o" ref="r:9ac3cf75-eaf9-4197-b625-5018f60fefe6(MathTaskLanguage.structure)" />
-    <import index="m2yq" ref="r:6175e6e7-40aa-4f0d-8428-f5be3bfa59d6(Engine.sandbox)" />
     <import index="687v" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.niftygui(Engine.runtime/)" />
     <import index="8l7g" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:de.lessvoid.nifty(Engine.runtime/)" />
     <import index="ri15" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:de.lessvoid.nifty.builder(Engine.runtime/)" />
-    <import index="dsfy" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:de.lessvoid.nifty.screen(Engine.runtime/)" />
     <import index="cjsk" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:de.lessvoid.nifty.controls.textfield.builder(Engine.runtime/)" />
     <import index="5abp" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:de.lessvoid.nifty.controls.button.builder(Engine.runtime/)" />
+    <import index="dsfy" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:de.lessvoid.nifty.screen(Engine.runtime/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
     <import index="wm38" ref="9d761c95-11f4-4220-9a74-43bcaeb93203/java:com.jme3.app.state(Engine.runtime/)" implicit="true" />
@@ -497,25 +493,25 @@
       <node concept="3cqZAl" id="3bDohNwsp22" role="3clF45" />
       <node concept="3Tm1VV" id="3bDohNwsp23" role="1B3o_S" />
       <node concept="3clFbS" id="3bDohNwsp24" role="3clF47">
-        <node concept="3cpWs8" id="3bDohNwtcdS" role="3cqZAp">
-          <node concept="3cpWsn" id="3bDohNwtcdT" role="3cpWs9">
+        <node concept="3cpWs8" id="4UrWtfl0S02" role="3cqZAp">
+          <node concept="3cpWsn" id="4UrWtfl0S03" role="3cpWs9">
             <property role="TrG5h" value="app" />
-            <node concept="3uibUv" id="3bDohNwtcdU" role="1tU5fm">
+            <node concept="3uibUv" id="4UrWtfl0S04" role="1tU5fm">
               <ref role="3uigEE" node="3bDohNwsp1y" resolve="map_GameScreen" />
             </node>
-            <node concept="2ShNRf" id="3bDohNwtcfX" role="33vP2m">
-              <node concept="HV5vD" id="3bDohNwtco_" role="2ShVmc">
+            <node concept="2ShNRf" id="4UrWtfl0U4n" role="33vP2m">
+              <node concept="HV5vD" id="4UrWtfl0UBg" role="2ShVmc">
                 <ref role="HV5vE" node="3bDohNwsp1y" resolve="map_GameScreen" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="3bDohNwtfLQ" role="3cqZAp">
-          <node concept="2OqwBi" id="3bDohNwtfSe" role="3clFbG">
-            <node concept="37vLTw" id="3bDohNwtfLO" role="2Oq$k0">
-              <ref role="3cqZAo" node="3bDohNwtcdT" resolve="app" />
+        <node concept="3clFbF" id="4UrWtfl17VW" role="3cqZAp">
+          <node concept="2OqwBi" id="4UrWtfl18qr" role="3clFbG">
+            <node concept="37vLTw" id="4UrWtfl17VU" role="2Oq$k0">
+              <ref role="3cqZAo" node="4UrWtfl0S03" resolve="app" />
             </node>
-            <node concept="liA8E" id="3bDohNwtg2Z" role="2OqNvi">
+            <node concept="liA8E" id="4UrWtfl18U0" role="2OqNvi">
               <ref role="37wK5l" to="6rn5:~SimpleApplication.start()" resolve="start" />
             </node>
           </node>
@@ -819,6 +815,16 @@
                       <ref role="1Y3XeK" to="ri15:~ScreenBuilder" resolve="ScreenBuilder" />
                       <node concept="3KIgzJ" id="4UrWtfkOfWU" role="jymVt">
                         <node concept="3clFbS" id="4UrWtfkOfWW" role="3KIlGz">
+                          <node concept="3clFbF" id="4UrWtfkZyyT" role="3cqZAp">
+                            <node concept="1rXfSq" id="4UrWtfkZyyR" role="3clFbG">
+                              <ref role="37wK5l" to="ri15:~ScreenBuilder.controller(de.lessvoid.nifty.screen.ScreenController)" resolve="controller" />
+                              <node concept="2ShNRf" id="4UrWtfkZz8a" role="37wK5m">
+                                <node concept="1pGfFk" id="4UrWtfkZ$RJ" role="2ShVmc">
+                                  <ref role="37wK5l" to="dsfy:~DefaultScreenController.&lt;init&gt;()" resolve="DefaultScreenController" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
                           <node concept="3clFbF" id="4UrWtfkOg6H" role="3cqZAp">
                             <node concept="1rXfSq" id="4UrWtfkOg6G" role="3clFbG">
                               <ref role="37wK5l" node="3osPhDXGJWg" resolve="setupKeys" />
@@ -988,6 +994,9 @@
                                                                         <ref role="37wK5l" to="ri15:~EffectBuilder.effectValue(java.lang.String...)" resolve="effectValue" />
                                                                         <node concept="Xl_RD" id="4UrWtfkOEIl" role="37wK5m">
                                                                           <property role="Xl_RC" value="100" />
+                                                                        </node>
+                                                                        <node concept="Xl_RD" id="4UrWtfkYUGv" role="37wK5m">
+                                                                          <property role="Xl_RC" value="#ffffff" />
                                                                         </node>
                                                                       </node>
                                                                     </node>
@@ -1347,6 +1356,9 @@
                                                                                       <ref role="37wK5l" to="ri15:~EffectBuilder.effectValue(java.lang.String...)" resolve="effectValue" />
                                                                                       <node concept="Xl_RD" id="4UrWtfkPrJI" role="37wK5m">
                                                                                         <property role="Xl_RC" value="100" />
+                                                                                      </node>
+                                                                                      <node concept="Xl_RD" id="4UrWtfkZO0F" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="#ffffff" />
                                                                                       </node>
                                                                                     </node>
                                                                                   </node>
@@ -1822,6 +1834,9 @@
                                                                         <node concept="Xl_RD" id="4UrWtfkPYfK" role="37wK5m">
                                                                           <property role="Xl_RC" value="100" />
                                                                         </node>
+                                                                        <node concept="Xl_RD" id="4UrWtfkZeo3" role="37wK5m">
+                                                                          <property role="Xl_RC" value="#ffffff" />
+                                                                        </node>
                                                                       </node>
                                                                     </node>
                                                                     <node concept="3clFbF" id="4UrWtfkPYfL" role="3cqZAp">
@@ -1944,6 +1959,557 @@
         </node>
       </node>
     </node>
+    <node concept="2YIFZL" id="4UrWtfl1bx1" role="jymVt">
+      <property role="TrG5h" value="createEndScreen" />
+      <node concept="3clFbS" id="4UrWtfl1bx2" role="3clF47">
+        <node concept="3clFbF" id="4UrWtfl1bxq" role="3cqZAp">
+          <node concept="2OqwBi" id="4UrWtfl1bxr" role="3clFbG">
+            <node concept="37vLTw" id="4UrWtfl1bxs" role="2Oq$k0">
+              <ref role="3cqZAo" node="4UrWtfl1bA1" resolve="nifty" />
+            </node>
+            <node concept="liA8E" id="4UrWtfl1bxt" role="2OqNvi">
+              <ref role="37wK5l" to="8l7g:~Nifty.addScreen(java.lang.String,de.lessvoid.nifty.screen.Screen)" resolve="addScreen" />
+              <node concept="Xl_RD" id="4UrWtfl1bxu" role="37wK5m">
+                <property role="Xl_RC" value="end" />
+              </node>
+              <node concept="2OqwBi" id="4UrWtfl1bxv" role="37wK5m">
+                <node concept="2ShNRf" id="4UrWtfl1bxw" role="2Oq$k0">
+                  <node concept="YeOm9" id="4UrWtfl1bxx" role="2ShVmc">
+                    <node concept="1Y3b0j" id="4UrWtfl1bxy" role="YeSDq">
+                      <property role="2bfB8j" value="true" />
+                      <ref role="1Y3XeK" to="ri15:~ScreenBuilder" resolve="ScreenBuilder" />
+                      <ref role="37wK5l" to="ri15:~ScreenBuilder.&lt;init&gt;(java.lang.String)" resolve="ScreenBuilder" />
+                      <node concept="3Tm1VV" id="4UrWtfl1bxz" role="1B3o_S" />
+                      <node concept="Xl_RD" id="4UrWtfl1bx$" role="37wK5m">
+                        <property role="Xl_RC" value="end" />
+                      </node>
+                      <node concept="3KIgzJ" id="4UrWtfl1bx_" role="jymVt">
+                        <node concept="3clFbS" id="4UrWtfl1bxA" role="3KIlGz">
+                          <node concept="3clFbF" id="4UrWtfl1bxB" role="3cqZAp">
+                            <node concept="1rXfSq" id="4UrWtfl1bxC" role="3clFbG">
+                              <ref role="37wK5l" to="ri15:~ScreenBuilder.controller(de.lessvoid.nifty.screen.ScreenController)" resolve="controller" />
+                              <node concept="2ShNRf" id="4UrWtfl1bxD" role="37wK5m">
+                                <node concept="1pGfFk" id="4UrWtfl1qyz" role="2ShVmc">
+                                  <ref role="37wK5l" to="dsfy:~DefaultScreenController.&lt;init&gt;()" resolve="DefaultScreenController" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbF" id="4UrWtfl1roF" role="3cqZAp">
+                            <node concept="1rXfSq" id="4UrWtfl1roD" role="3clFbG">
+                              <ref role="37wK5l" to="ri15:~ScreenBuilder.layer(de.lessvoid.nifty.builder.LayerBuilder)" resolve="layer" />
+                              <node concept="2ShNRf" id="4UrWtfl1swa" role="37wK5m">
+                                <node concept="YeOm9" id="4UrWtfl1tyE" role="2ShVmc">
+                                  <node concept="1Y3b0j" id="4UrWtfl1tyH" role="YeSDq">
+                                    <property role="2bfB8j" value="true" />
+                                    <ref role="37wK5l" to="ri15:~LayerBuilder.&lt;init&gt;(java.lang.String)" resolve="LayerBuilder" />
+                                    <ref role="1Y3XeK" to="ri15:~LayerBuilder" resolve="LayerBuilder" />
+                                    <node concept="3Tm1VV" id="4UrWtfl1tyI" role="1B3o_S" />
+                                    <node concept="Xl_RD" id="4UrWtfl1ti3" role="37wK5m">
+                                      <property role="Xl_RC" value="background" />
+                                    </node>
+                                    <node concept="3KIgzJ" id="4UrWtfl1tSw" role="jymVt">
+                                      <node concept="3clFbS" id="4UrWtfl1tSx" role="3KIlGz">
+                                        <node concept="3clFbF" id="4UrWtfl1tYq" role="3cqZAp">
+                                          <node concept="1rXfSq" id="4UrWtfl1tYp" role="3clFbG">
+                                            <ref role="37wK5l" to="ri15:~ElementBuilder.childLayoutCenter()" resolve="childLayoutCenter" />
+                                          </node>
+                                        </node>
+                                        <node concept="3clFbF" id="4UrWtfl1uyU" role="3cqZAp">
+                                          <node concept="1rXfSq" id="4UrWtfl1uyS" role="3clFbG">
+                                            <ref role="37wK5l" to="ri15:~ElementBuilder.image(de.lessvoid.nifty.builder.ImageBuilder)" resolve="image" />
+                                            <node concept="2ShNRf" id="4UrWtfl1vcD" role="37wK5m">
+                                              <node concept="YeOm9" id="4UrWtfl1vTP" role="2ShVmc">
+                                                <node concept="1Y3b0j" id="4UrWtfl1vTS" role="YeSDq">
+                                                  <property role="2bfB8j" value="true" />
+                                                  <ref role="37wK5l" to="ri15:~ImageBuilder.&lt;init&gt;()" resolve="ImageBuilder" />
+                                                  <ref role="1Y3XeK" to="ri15:~ImageBuilder" resolve="ImageBuilder" />
+                                                  <node concept="3Tm1VV" id="4UrWtfl1vTT" role="1B3o_S" />
+                                                  <node concept="3KIgzJ" id="4UrWtfl1wuN" role="jymVt">
+                                                    <node concept="3clFbS" id="4UrWtfl1wuO" role="3KIlGz">
+                                                      <node concept="3clFbF" id="4UrWtfl1wAK" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1wAJ" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.filename(java.lang.String)" resolve="filename" />
+                                                          <node concept="Xl_RD" id="4UrWtfl4URs" role="37wK5m">
+                                                            <property role="Xl_RC" value="Textures/Terrain/splat/fortress512.png" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1xyw" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1xyu" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.height(java.lang.String)" resolve="height" />
+                                                          <node concept="Xl_RD" id="4UrWtfl1yCd" role="37wK5m">
+                                                            <property role="Xl_RC" value="100%" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1yRi" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1yRg" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.width(java.lang.String)" resolve="width" />
+                                                          <node concept="Xl_RD" id="4UrWtfl1$BM" role="37wK5m">
+                                                            <property role="Xl_RC" value="100%" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbF" id="4UrWtfl1bxF" role="3cqZAp">
+                            <node concept="1rXfSq" id="4UrWtfl1bxG" role="3clFbG">
+                              <ref role="37wK5l" to="ri15:~ScreenBuilder.layer(de.lessvoid.nifty.builder.LayerBuilder)" resolve="layer" />
+                              <node concept="2ShNRf" id="4UrWtfl1bxH" role="37wK5m">
+                                <node concept="YeOm9" id="4UrWtfl1bxI" role="2ShVmc">
+                                  <node concept="1Y3b0j" id="4UrWtfl1bxJ" role="YeSDq">
+                                    <property role="2bfB8j" value="true" />
+                                    <ref role="37wK5l" to="ri15:~LayerBuilder.&lt;init&gt;(java.lang.String)" resolve="LayerBuilder" />
+                                    <ref role="1Y3XeK" to="ri15:~LayerBuilder" resolve="LayerBuilder" />
+                                    <node concept="3Tm1VV" id="4UrWtfl1bxK" role="1B3o_S" />
+                                    <node concept="Xl_RD" id="4UrWtfl1bxL" role="37wK5m">
+                                      <property role="Xl_RC" value="panel_middle" />
+                                    </node>
+                                    <node concept="3KIgzJ" id="4UrWtfl1bxM" role="jymVt">
+                                      <node concept="3clFbS" id="4UrWtfl1bxN" role="3KIlGz">
+                                        <node concept="3clFbF" id="4UrWtfl1bxO" role="3cqZAp">
+                                          <node concept="1rXfSq" id="4UrWtfl1bxP" role="3clFbG">
+                                            <ref role="37wK5l" to="ri15:~ElementBuilder.childLayoutVertical()" resolve="childLayoutVertical" />
+                                          </node>
+                                        </node>
+                                        <node concept="3clFbF" id="4UrWtfl1_YV" role="3cqZAp">
+                                          <node concept="1rXfSq" id="4UrWtfl1_YX" role="3clFbG">
+                                            <ref role="37wK5l" to="ri15:~ElementBuilder.panel(de.lessvoid.nifty.builder.PanelBuilder)" resolve="panel" />
+                                            <node concept="2ShNRf" id="4UrWtfl1_YY" role="37wK5m">
+                                              <node concept="YeOm9" id="4UrWtfl1_YZ" role="2ShVmc">
+                                                <node concept="1Y3b0j" id="4UrWtfl1_Z0" role="YeSDq">
+                                                  <property role="2bfB8j" value="true" />
+                                                  <ref role="37wK5l" to="ri15:~PanelBuilder.&lt;init&gt;(java.lang.String)" resolve="PanelBuilder" />
+                                                  <ref role="1Y3XeK" to="ri15:~PanelBuilder" resolve="PanelBuilder" />
+                                                  <node concept="3Tm1VV" id="4UrWtfl1_Z1" role="1B3o_S" />
+                                                  <node concept="Xl_RD" id="4UrWtfl1_Z2" role="37wK5m">
+                                                    <property role="Xl_RC" value="panel_mid" />
+                                                  </node>
+                                                  <node concept="3KIgzJ" id="4UrWtfl1_Z3" role="jymVt">
+                                                    <node concept="3clFbS" id="4UrWtfl1_Z4" role="3KIlGz">
+                                                      <node concept="3clFbF" id="4UrWtfl1_Z5" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1_Z6" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.childLayoutCenter()" resolve="childLayoutCenter" />
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1_Z7" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1_Z8" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.alignCenter()" resolve="alignCenter" />
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1_Z9" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1_Za" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.height(java.lang.String)" resolve="height" />
+                                                          <node concept="Xl_RD" id="4UrWtfl1_Zb" role="37wK5m">
+                                                            <property role="Xl_RC" value="75%" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1_Zc" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1_Zd" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.width(java.lang.String)" resolve="width" />
+                                                          <node concept="Xl_RD" id="4UrWtfl1_Ze" role="37wK5m">
+                                                            <property role="Xl_RC" value="75%" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbH" id="4UrWtfl1_Zf" role="3cqZAp" />
+                                                      <node concept="3clFbF" id="4UrWtfl1_Zg" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1_Zh" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.text(de.lessvoid.nifty.builder.TextBuilder)" resolve="text" />
+                                                          <node concept="2ShNRf" id="4UrWtfl1_Zi" role="37wK5m">
+                                                            <node concept="YeOm9" id="4UrWtfl1_Zj" role="2ShVmc">
+                                                              <node concept="1Y3b0j" id="4UrWtfl1_Zk" role="YeSDq">
+                                                                <property role="2bfB8j" value="true" />
+                                                                <ref role="1Y3XeK" to="ri15:~TextBuilder" resolve="TextBuilder" />
+                                                                <ref role="37wK5l" to="ri15:~TextBuilder.&lt;init&gt;()" resolve="TextBuilder" />
+                                                                <node concept="3Tm1VV" id="4UrWtfl1_Zl" role="1B3o_S" />
+                                                                <node concept="3KIgzJ" id="4UrWtfl1_Zm" role="jymVt">
+                                                                  <node concept="3clFbS" id="4UrWtfl1_Zn" role="3KIlGz">
+                                                                    <node concept="3clFbF" id="4UrWtfl1_Zo" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1_Zp" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~ElementBuilder.text(java.lang.String)" resolve="text" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl4aBo" role="37wK5m">
+                                                                          <property role="Xl_RC" value="you ran out of lives" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1_Zv" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1_Zw" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~ElementBuilder.font(java.lang.String)" resolve="font" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl1_Zx" role="37wK5m">
+                                                                          <property role="Xl_RC" value="Interface/Fonts/Default.fnt" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1_Zy" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1_Zz" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~ElementBuilder.onActiveEffect(de.lessvoid.nifty.builder.EffectBuilder)" resolve="onActiveEffect" />
+                                                                        <node concept="2ShNRf" id="4UrWtfl1_Z$" role="37wK5m">
+                                                                          <node concept="YeOm9" id="4UrWtfl1_Z_" role="2ShVmc">
+                                                                            <node concept="1Y3b0j" id="4UrWtfl1_ZA" role="YeSDq">
+                                                                              <property role="2bfB8j" value="true" />
+                                                                              <ref role="37wK5l" to="ri15:~EffectBuilder.&lt;init&gt;(java.lang.String)" resolve="EffectBuilder" />
+                                                                              <ref role="1Y3XeK" to="ri15:~EffectBuilder" resolve="EffectBuilder" />
+                                                                              <node concept="3Tm1VV" id="4UrWtfl1_ZB" role="1B3o_S" />
+                                                                              <node concept="Xl_RD" id="4UrWtfl1_ZC" role="37wK5m">
+                                                                                <property role="Xl_RC" value="textSize" />
+                                                                              </node>
+                                                                              <node concept="3KIgzJ" id="4UrWtfl1_ZD" role="jymVt">
+                                                                                <node concept="3clFbS" id="4UrWtfl1_ZE" role="3KIlGz">
+                                                                                  <node concept="3clFbF" id="4UrWtfl1_ZF" role="3cqZAp">
+                                                                                    <node concept="1rXfSq" id="4UrWtfl1_ZG" role="3clFbG">
+                                                                                      <ref role="37wK5l" to="ri15:~EffectBuilder.effectValue(java.lang.String...)" resolve="effectValue" />
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZH" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="100" />
+                                                                                      </node>
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZI" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="#ffffff" />
+                                                                                      </node>
+                                                                                    </node>
+                                                                                  </node>
+                                                                                  <node concept="3clFbF" id="4UrWtfl1_ZJ" role="3cqZAp">
+                                                                                    <node concept="1rXfSq" id="4UrWtfl1_ZK" role="3clFbG">
+                                                                                      <ref role="37wK5l" to="ri15:~EffectBuilder.effectParameter(java.lang.String,java.lang.String)" resolve="effectParameter" />
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZL" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="factor" />
+                                                                                      </node>
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZM" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="10" />
+                                                                                      </node>
+                                                                                    </node>
+                                                                                  </node>
+                                                                                  <node concept="3clFbF" id="4UrWtfl1_ZN" role="3cqZAp">
+                                                                                    <node concept="1rXfSq" id="4UrWtfl1_ZO" role="3clFbG">
+                                                                                      <ref role="37wK5l" to="ri15:~EffectBuilder.effectParameter(java.lang.String,java.lang.String)" resolve="effectParameter" />
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZP" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="startSize" />
+                                                                                      </node>
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZQ" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="2" />
+                                                                                      </node>
+                                                                                    </node>
+                                                                                  </node>
+                                                                                  <node concept="3clFbF" id="4UrWtfl1_ZR" role="3cqZAp">
+                                                                                    <node concept="1rXfSq" id="4UrWtfl1_ZS" role="3clFbG">
+                                                                                      <ref role="37wK5l" to="ri15:~EffectBuilder.effectParameter(java.lang.String,java.lang.String)" resolve="effectParameter" />
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZT" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="endSize" />
+                                                                                      </node>
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZU" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="2" />
+                                                                                      </node>
+                                                                                    </node>
+                                                                                  </node>
+                                                                                  <node concept="3clFbF" id="4UrWtfl1_ZV" role="3cqZAp">
+                                                                                    <node concept="1rXfSq" id="4UrWtfl1_ZW" role="3clFbG">
+                                                                                      <ref role="37wK5l" to="ri15:~EffectBuilder.effectParameter(java.lang.String,java.lang.String)" resolve="effectParameter" />
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZX" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="textSize" />
+                                                                                      </node>
+                                                                                      <node concept="Xl_RD" id="4UrWtfl1_ZY" role="37wK5m">
+                                                                                        <property role="Xl_RC" value="1" />
+                                                                                      </node>
+                                                                                    </node>
+                                                                                  </node>
+                                                                                </node>
+                                                                              </node>
+                                                                            </node>
+                                                                          </node>
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1_ZZ" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1A00" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~TextBuilder.wrap(boolean)" resolve="wrap" />
+                                                                        <node concept="3clFbT" id="4UrWtfl1A01" role="37wK5m">
+                                                                          <property role="3clFbU" value="true" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1A02" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1A03" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~ElementBuilder.height(java.lang.String)" resolve="height" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl1A04" role="37wK5m">
+                                                                          <property role="Xl_RC" value="100%" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1A05" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1A06" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~ElementBuilder.width(java.lang.String)" resolve="width" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl1A07" role="37wK5m">
+                                                                          <property role="Xl_RC" value="100%" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                  </node>
+                                                                </node>
+                                                              </node>
+                                                            </node>
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                        <node concept="3clFbH" id="4UrWtfl1_Y6" role="3cqZAp" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbF" id="4UrWtfl1b$I" role="3cqZAp">
+                            <node concept="1rXfSq" id="4UrWtfl1b$J" role="3clFbG">
+                              <ref role="37wK5l" to="ri15:~ScreenBuilder.layer(de.lessvoid.nifty.builder.LayerBuilder)" resolve="layer" />
+                              <node concept="2ShNRf" id="4UrWtfl1b$K" role="37wK5m">
+                                <node concept="YeOm9" id="4UrWtfl1b$L" role="2ShVmc">
+                                  <node concept="1Y3b0j" id="4UrWtfl1b$M" role="YeSDq">
+                                    <property role="2bfB8j" value="true" />
+                                    <ref role="1Y3XeK" to="ri15:~LayerBuilder" resolve="LayerBuilder" />
+                                    <ref role="37wK5l" to="ri15:~LayerBuilder.&lt;init&gt;(java.lang.String)" resolve="LayerBuilder" />
+                                    <node concept="3Tm1VV" id="4UrWtfl1b$N" role="1B3o_S" />
+                                    <node concept="Xl_RD" id="4UrWtfl1b$O" role="37wK5m">
+                                      <property role="Xl_RC" value="top" />
+                                    </node>
+                                    <node concept="3KIgzJ" id="4UrWtfl1b$P" role="jymVt">
+                                      <node concept="3clFbS" id="4UrWtfl1b$Q" role="3KIlGz">
+                                        <node concept="3clFbF" id="4UrWtfl1b$R" role="3cqZAp">
+                                          <node concept="1rXfSq" id="4UrWtfl1b$S" role="3clFbG">
+                                            <ref role="37wK5l" to="ri15:~ElementBuilder.childLayoutVertical()" resolve="childLayoutVertical" />
+                                          </node>
+                                        </node>
+                                        <node concept="3clFbF" id="4UrWtfl1b$T" role="3cqZAp">
+                                          <node concept="1rXfSq" id="4UrWtfl1b$U" role="3clFbG">
+                                            <ref role="37wK5l" to="ri15:~ElementBuilder.height(java.lang.String)" resolve="height" />
+                                            <node concept="Xl_RD" id="4UrWtfl1b$V" role="37wK5m">
+                                              <property role="Xl_RC" value="70%" />
+                                            </node>
+                                          </node>
+                                        </node>
+                                        <node concept="3clFbF" id="4UrWtfl1b$W" role="3cqZAp">
+                                          <node concept="1rXfSq" id="4UrWtfl1b$X" role="3clFbG">
+                                            <ref role="37wK5l" to="ri15:~ElementBuilder.width(java.lang.String)" resolve="width" />
+                                            <node concept="Xl_RD" id="4UrWtfl1b$Y" role="37wK5m">
+                                              <property role="Xl_RC" value="70%" />
+                                            </node>
+                                          </node>
+                                        </node>
+                                        <node concept="3clFbH" id="4UrWtfl1b$Z" role="3cqZAp" />
+                                        <node concept="3clFbF" id="4UrWtfl1b_0" role="3cqZAp">
+                                          <node concept="1rXfSq" id="4UrWtfl1b_1" role="3clFbG">
+                                            <ref role="37wK5l" to="ri15:~ElementBuilder.text(de.lessvoid.nifty.builder.TextBuilder)" resolve="text" />
+                                            <node concept="2ShNRf" id="4UrWtfl1b_2" role="37wK5m">
+                                              <node concept="YeOm9" id="4UrWtfl1b_3" role="2ShVmc">
+                                                <node concept="1Y3b0j" id="4UrWtfl1b_4" role="YeSDq">
+                                                  <property role="2bfB8j" value="true" />
+                                                  <ref role="1Y3XeK" to="ri15:~TextBuilder" resolve="TextBuilder" />
+                                                  <ref role="37wK5l" to="ri15:~TextBuilder.&lt;init&gt;(java.lang.String)" resolve="TextBuilder" />
+                                                  <node concept="3Tm1VV" id="4UrWtfl1b_5" role="1B3o_S" />
+                                                  <node concept="Xl_RD" id="4UrWtfl1b_6" role="37wK5m">
+                                                    <property role="Xl_RC" value="Text" />
+                                                  </node>
+                                                  <node concept="3KIgzJ" id="4UrWtfl1b_7" role="jymVt">
+                                                    <node concept="3clFbS" id="4UrWtfl1b_8" role="3KIlGz">
+                                                      <node concept="3clFbF" id="4UrWtfl1b_9" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1b_a" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.text(java.lang.String)" resolve="text" />
+                                                          <node concept="3cpWs3" id="4UrWtfl1b_b" role="37wK5m">
+                                                            <node concept="10M0yZ" id="4UrWtfl1b_c" role="3uHU7w">
+                                                              <ref role="1PxDUh" to="a480:4UrWtfkOuoA" resolve="Stats" />
+                                                              <ref role="3cqZAo" to="a480:4UrWtfkOuy2" resolve="score" />
+                                                            </node>
+                                                            <node concept="3cpWs3" id="4UrWtfl1b_d" role="3uHU7B">
+                                                              <node concept="3cpWs3" id="4UrWtfl1b_e" role="3uHU7B">
+                                                                <node concept="Xl_RD" id="4UrWtfl1b_f" role="3uHU7B">
+                                                                  <property role="Xl_RC" value="lives: " />
+                                                                </node>
+                                                                <node concept="10M0yZ" id="4UrWtfl1b_g" role="3uHU7w">
+                                                                  <ref role="3cqZAo" to="a480:4UrWtfkOuu3" resolve="lives" />
+                                                                  <ref role="1PxDUh" to="a480:4UrWtfkOuoA" resolve="Stats" />
+                                                                </node>
+                                                              </node>
+                                                              <node concept="Xl_RD" id="4UrWtfl1b_h" role="3uHU7w">
+                                                                <property role="Xl_RC" value=", score: " />
+                                                              </node>
+                                                            </node>
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1b_i" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1b_j" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.font(java.lang.String)" resolve="font" />
+                                                          <node concept="Xl_RD" id="4UrWtfl1b_k" role="37wK5m">
+                                                            <property role="Xl_RC" value="Interface/Fonts/Default.fnt" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1b_l" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1b_m" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.onActiveEffect(de.lessvoid.nifty.builder.EffectBuilder)" resolve="onActiveEffect" />
+                                                          <node concept="2ShNRf" id="4UrWtfl1b_n" role="37wK5m">
+                                                            <node concept="YeOm9" id="4UrWtfl1b_o" role="2ShVmc">
+                                                              <node concept="1Y3b0j" id="4UrWtfl1b_p" role="YeSDq">
+                                                                <property role="2bfB8j" value="true" />
+                                                                <ref role="1Y3XeK" to="ri15:~EffectBuilder" resolve="EffectBuilder" />
+                                                                <ref role="37wK5l" to="ri15:~EffectBuilder.&lt;init&gt;(java.lang.String)" resolve="EffectBuilder" />
+                                                                <node concept="3Tm1VV" id="4UrWtfl1b_q" role="1B3o_S" />
+                                                                <node concept="Xl_RD" id="4UrWtfl1b_r" role="37wK5m">
+                                                                  <property role="Xl_RC" value="textSize" />
+                                                                </node>
+                                                                <node concept="3KIgzJ" id="4UrWtfl1b_s" role="jymVt">
+                                                                  <node concept="3clFbS" id="4UrWtfl1b_t" role="3KIlGz">
+                                                                    <node concept="3clFbF" id="4UrWtfl1b_u" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1b_v" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~EffectBuilder.effectValue(java.lang.String...)" resolve="effectValue" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_w" role="37wK5m">
+                                                                          <property role="Xl_RC" value="100" />
+                                                                        </node>
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_x" role="37wK5m">
+                                                                          <property role="Xl_RC" value="#ffffff" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1b_y" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1b_z" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~EffectBuilder.effectParameter(java.lang.String,java.lang.String)" resolve="effectParameter" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_$" role="37wK5m">
+                                                                          <property role="Xl_RC" value="factor" />
+                                                                        </node>
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b__" role="37wK5m">
+                                                                          <property role="Xl_RC" value="10" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1b_A" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1b_B" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~EffectBuilder.effectParameter(java.lang.String,java.lang.String)" resolve="effectParameter" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_C" role="37wK5m">
+                                                                          <property role="Xl_RC" value="startSize" />
+                                                                        </node>
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_D" role="37wK5m">
+                                                                          <property role="Xl_RC" value="2" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1b_E" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1b_F" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~EffectBuilder.effectParameter(java.lang.String,java.lang.String)" resolve="effectParameter" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_G" role="37wK5m">
+                                                                          <property role="Xl_RC" value="endSize" />
+                                                                        </node>
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_H" role="37wK5m">
+                                                                          <property role="Xl_RC" value="2" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                    <node concept="3clFbF" id="4UrWtfl1b_I" role="3cqZAp">
+                                                                      <node concept="1rXfSq" id="4UrWtfl1b_J" role="3clFbG">
+                                                                        <ref role="37wK5l" to="ri15:~EffectBuilder.effectParameter(java.lang.String,java.lang.String)" resolve="effectParameter" />
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_K" role="37wK5m">
+                                                                          <property role="Xl_RC" value="textSize" />
+                                                                        </node>
+                                                                        <node concept="Xl_RD" id="4UrWtfl1b_L" role="37wK5m">
+                                                                          <property role="Xl_RC" value="1" />
+                                                                        </node>
+                                                                      </node>
+                                                                    </node>
+                                                                  </node>
+                                                                </node>
+                                                              </node>
+                                                            </node>
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1b_M" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1b_N" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~TextBuilder.wrap(boolean)" resolve="wrap" />
+                                                          <node concept="3clFbT" id="4UrWtfl1b_O" role="37wK5m">
+                                                            <property role="3clFbU" value="true" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1b_P" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1b_Q" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.height(java.lang.String)" resolve="height" />
+                                                          <node concept="Xl_RD" id="4UrWtfl1b_R" role="37wK5m">
+                                                            <property role="Xl_RC" value="100%" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1b_S" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1b_T" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.width(java.lang.String)" resolve="width" />
+                                                          <node concept="Xl_RD" id="4UrWtfl1b_U" role="37wK5m">
+                                                            <property role="Xl_RC" value="100%" />
+                                                          </node>
+                                                        </node>
+                                                      </node>
+                                                      <node concept="3clFbF" id="4UrWtfl1b_V" role="3cqZAp">
+                                                        <node concept="1rXfSq" id="4UrWtfl1b_W" role="3clFbG">
+                                                          <ref role="37wK5l" to="ri15:~ElementBuilder.textHAlignLeft()" resolve="textHAlignLeft" />
+                                                        </node>
+                                                      </node>
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="4UrWtfl1b_X" role="2OqNvi">
+                  <ref role="37wK5l" to="ri15:~ScreenBuilder.build(de.lessvoid.nifty.Nifty)" resolve="build" />
+                  <node concept="37vLTw" id="4UrWtfl1b_Y" role="37wK5m">
+                    <ref role="3cqZAo" node="4UrWtfl1bA1" resolve="nifty" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="4UrWtfl1b_Z" role="1B3o_S" />
+      <node concept="3cqZAl" id="4UrWtfl1bA0" role="3clF45" />
+      <node concept="37vLTG" id="4UrWtfl1bA1" role="3clF46">
+        <property role="3TUv4t" value="true" />
+        <property role="TrG5h" value="nifty" />
+        <node concept="3uibUv" id="4UrWtfl1bA2" role="1tU5fm">
+          <ref role="3uigEE" to="8l7g:~Nifty" resolve="Nifty" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="4UrWtfl196g" role="jymVt" />
     <node concept="3clFb_" id="3osPhDXJIzp" role="jymVt">
       <property role="TrG5h" value="setupAnimationController" />
       <node concept="3clFbS" id="3osPhDXJIzs" role="3clF47">
@@ -3529,6 +4095,41 @@
             </node>
             <node concept="37vLTw" id="4UrWtfkQpa7" role="37vLTJ">
               <ref role="3cqZAo" node="4UrWtfkMN6A" resolve="previousDistance" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4UrWtfl0r0z" role="3cqZAp" />
+        <node concept="3clFbJ" id="4UrWtfl0sdA" role="3cqZAp">
+          <node concept="3clFbS" id="4UrWtfl0sdC" role="3clFbx">
+            <node concept="3clFbF" id="4UrWtfl4TT0" role="3cqZAp">
+              <node concept="1rXfSq" id="4UrWtfl4TSZ" role="3clFbG">
+                <ref role="37wK5l" node="4UrWtfl1bx1" resolve="createEndScreen" />
+                <node concept="37vLTw" id="4UrWtfl4U7L" role="37wK5m">
+                  <ref role="3cqZAo" node="4UrWtfkNu6d" resolve="nifty" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="4UrWtfl4Um_" role="3cqZAp">
+              <node concept="2OqwBi" id="4UrWtfl4Ut4" role="3clFbG">
+                <node concept="37vLTw" id="4UrWtfl4Umz" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4UrWtfkNu6d" resolve="nifty" />
+                </node>
+                <node concept="liA8E" id="4UrWtfl4UIY" role="2OqNvi">
+                  <ref role="37wK5l" to="8l7g:~Nifty.gotoScreen(java.lang.String)" resolve="gotoScreen" />
+                  <node concept="Xl_RD" id="4UrWtfl4UNi" role="37wK5m">
+                    <property role="Xl_RC" value="end" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbC" id="4UrWtfl0uS_" role="3clFbw">
+            <node concept="3cmrfG" id="4UrWtfl0vjF" role="3uHU7w">
+              <property role="3cmrfH" value="0" />
+            </node>
+            <node concept="10M0yZ" id="4UrWtfl0tEC" role="3uHU7B">
+              <ref role="3cqZAo" to="a480:4UrWtfkOuu3" resolve="lives" />
+              <ref role="1PxDUh" to="a480:4UrWtfkOuoA" resolve="Stats" />
             </node>
           </node>
         </node>

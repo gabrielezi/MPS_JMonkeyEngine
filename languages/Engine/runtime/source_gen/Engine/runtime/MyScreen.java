@@ -53,7 +53,6 @@ public class MyScreen extends AbstractAppState implements ScreenController {
 
       Element element1 = nifty.getScreen("hud").findElementById("TextStart");
       element1.getRenderer(TextRenderer.class).setText("lives: " + Stats.lives + ", score: " + Stats.score);
-      System.out.println(Stats.lives + "  " + Stats.score);
 
     } catch (NullPointerException e) {
     }

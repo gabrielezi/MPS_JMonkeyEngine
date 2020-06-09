@@ -30,12 +30,14 @@
     <classNode dependClassName="com.jme3.util.SkyFactory" />
     <classNode dependClassName="de.lessvoid.nifty.Nifty" />
     <classNode dependClassName="de.lessvoid.nifty.builder.EffectBuilder" />
+    <classNode dependClassName="de.lessvoid.nifty.builder.ImageBuilder" />
     <classNode dependClassName="de.lessvoid.nifty.builder.LayerBuilder" />
     <classNode dependClassName="de.lessvoid.nifty.builder.PanelBuilder" />
     <classNode dependClassName="de.lessvoid.nifty.builder.ScreenBuilder" />
     <classNode dependClassName="de.lessvoid.nifty.builder.TextBuilder" />
     <classNode dependClassName="de.lessvoid.nifty.controls.button.builder.ButtonBuilder" />
     <classNode dependClassName="de.lessvoid.nifty.controls.textfield.builder.TextFieldBuilder" />
+    <classNode dependClassName="de.lessvoid.nifty.screen.DefaultScreenController" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
