@@ -19,10 +19,10 @@ import com.jme3.material.Material;
 import com.jme3.niftygui.NiftyJmeDisplay;
 import de.lessvoid.nifty.Nifty;
 import Engine.runtime.Questions;
+import Engine.runtime.Stats;
 import de.lessvoid.nifty.builder.ScreenBuilder;
 import de.lessvoid.nifty.builder.LayerBuilder;
 import de.lessvoid.nifty.builder.TextBuilder;
-import Engine.runtime.Stats;
 import de.lessvoid.nifty.builder.EffectBuilder;
 import Engine.runtime.MyScreen;
 import de.lessvoid.nifty.builder.PanelBuilder;
@@ -87,6 +87,12 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
   public void simpleInitApp() {
     Questions.addQuestion("1*3");
     Questions.addQuestion("5*4");
+    Questions.addQuestion("3*8");
+    Questions.addQuestion("10*7");
+    Questions.addQuestion("9*8");
+    Questions.addQuestion("7*5");
+    Stats.lives = 6;
+    Stats.bonus = 10;
 
     bulletAppState = new BulletAppState();
     bulletAppState.setThreadingType(BulletAppState.ThreadingType.PARALLEL);

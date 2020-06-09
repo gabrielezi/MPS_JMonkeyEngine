@@ -17,6 +17,14 @@
         <child id="4815033423050654423" name="question" index="1ogMQO" />
       </concept>
     </language>
+    <language id="23c15207-2b1c-47e1-b536-41908a833633" name="FeedbackLang">
+      <concept id="5664386848460892620" name="FeedbackLang.structure.Lives" flags="ng" index="2qv1wv">
+        <property id="5664386848460892675" name="initialLives" index="2qv1Jg" />
+      </concept>
+      <concept id="5664386848460892482" name="FeedbackLang.structure.Score" flags="ng" index="2qv1yh">
+        <property id="5664386848460892510" name="bonus" index="2qv1yd" />
+      </concept>
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -34,6 +42,8 @@
       <concept id="3668570148122497074" name="Engine.structure.GameScreen" flags="ng" index="3iAf4I">
         <child id="4479388058107466586" name="terrainSize" index="20HEzI" />
         <child id="4479388058106534896" name="walls" index="20Ie14" />
+        <child id="5664386848460926880" name="lives" index="2qsTTN" />
+        <child id="5664386848460926885" name="score" index="2qsTTQ" />
         <child id="4277660428437317956" name="questions" index="3pBigU" />
       </concept>
     </language>
@@ -148,6 +158,24 @@
       <node concept="1ogMQK" id="3HtjnVyKNsO" role="1ogMQO">
         <property role="1osi7k" value="5*4" />
       </node>
+      <node concept="1ogMQK" id="4UrWtfkUlXb" role="1ogMQO">
+        <property role="1osi7k" value="3*8" />
+      </node>
+      <node concept="1ogMQK" id="4UrWtfkUlXf" role="1ogMQO">
+        <property role="1osi7k" value="10*7" />
+      </node>
+      <node concept="1ogMQK" id="4UrWtfkUlXk" role="1ogMQO">
+        <property role="1osi7k" value="9*8" />
+      </node>
+      <node concept="1ogMQK" id="4UrWtfkUlXq" role="1ogMQO">
+        <property role="1osi7k" value="7*5" />
+      </node>
+    </node>
+    <node concept="2qv1yh" id="4UrWtfkUlX7" role="2qsTTQ">
+      <property role="2qv1yd" value="10" />
+    </node>
+    <node concept="2qv1wv" id="4UrWtfkUlX9" role="2qsTTN">
+      <property role="2qv1Jg" value="6" />
     </node>
   </node>
 </model>

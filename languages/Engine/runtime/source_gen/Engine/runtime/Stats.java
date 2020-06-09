@@ -6,8 +6,9 @@ package Engine.runtime;
 public class Stats {
   public static int lives = 5;
   public static int score = 0;
+  public static int bonus = 5;
 
   public static void addScore() {
-    score = score + 5;
+    score = score + bonus;
   }
 }

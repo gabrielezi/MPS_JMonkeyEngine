@@ -936,6 +936,14 @@
         <property role="3cmrfH" value="0" />
       </node>
     </node>
+    <node concept="Wx3nA" id="4UrWtfkU1R4" role="jymVt">
+      <property role="TrG5h" value="bonus" />
+      <node concept="3Tm1VV" id="4UrWtfkU1Q2" role="1B3o_S" />
+      <node concept="10Oyi0" id="4UrWtfkU1QP" role="1tU5fm" />
+      <node concept="3cmrfG" id="4UrWtfkU1RS" role="33vP2m">
+        <property role="3cmrfH" value="5" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="4UrWtfkT1rv" role="jymVt" />
     <node concept="2YIFZL" id="4UrWtfkT1uL" role="jymVt">
       <property role="TrG5h" value="addScore" />
@@ -943,11 +951,11 @@
         <node concept="3clFbF" id="4UrWtfkT1vS" role="3cqZAp">
           <node concept="37vLTI" id="4UrWtfkT1Mp" role="3clFbG">
             <node concept="3cpWs3" id="4UrWtfkT1OJ" role="37vLTx">
-              <node concept="3cmrfG" id="4UrWtfkT1OY" role="3uHU7w">
-                <property role="3cmrfH" value="5" />
-              </node>
               <node concept="37vLTw" id="4UrWtfkT1Nx" role="3uHU7B">
                 <ref role="3cqZAo" node="4UrWtfkOuy2" resolve="score" />
+              </node>
+              <node concept="37vLTw" id="4UrWtfkU1So" role="3uHU7w">
+                <ref role="3cqZAo" node="4UrWtfkU1R4" resolve="bonus" />
               </node>
             </node>
             <node concept="37vLTw" id="4UrWtfkT1vR" role="37vLTJ">

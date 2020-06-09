@@ -41,6 +41,7 @@ public class Language extends LanguageRuntime {
   protected void fillExtendedLanguages(Collection<SLanguage> extendedLanguages) {
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("8fbac3a7-85ba-48f9-8845-8d9d85fd4680"), "MathTaskLanguage"));
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("4caf0310-491e-41f5-8a9b-2006b3a94898"), "jetbrains.mps.execution.util"));
+    extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("23c15207-2b1c-47e1-b536-41908a833633"), "FeedbackLang"));
   }
 
   @Override
