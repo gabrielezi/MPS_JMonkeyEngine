@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root nodeRef="r:6f804175-74c8-45d4-becb-2a8488971bc5(Engine.runtime)/4815033423052529596">
+    <file name="Questions.java">
+      <node id="4815033423051210945" at="14,0,15,0" concept="9" trace="questionsArray" />
+      <node id="5664386848457882151" at="15,0,16,0" concept="9" trace="answerMap" />
+      <node id="4815033423051921926" at="17,41,18,26" concept="7" />
+      <node id="5664386848458679916" at="20,53,21,26" concept="2" />
+      <node id="5664386848458680268" at="21,26,22,25" concept="2" />
+      <node id="4815033423051397164" at="24,51,25,35" concept="2" />
+      <node id="5664386848458633975" at="27,50,28,48" concept="6" />
+      <node id="5664386848457891314" at="28,48,29,38" concept="2" />
+      <node id="5664386848457900075" at="31,30,32,21" concept="7" />
+      <node id="5664386848458622781" at="34,59,35,19" concept="6" />
+      <node id="5664386848458615759" at="35,19,36,56" concept="6" />
+      <node id="5664386848458616834" at="36,56,37,60" concept="6" />
+      <node id="5664386848458623312" at="38,9,39,45" concept="2" />
+      <node id="5664386848458617878" at="41,5,42,18" concept="7" />
+      <node id="4815033423051921014" at="17,0,20,0" concept="10" trace="getQuestionsList#()Ljava/util/List;" />
+      <node id="4815033423051397161" at="24,0,27,0" concept="10" trace="addToList#(Ljava/lang/String;)V" />
+      <node id="5664386848457899662" at="31,0,34,0" concept="10" trace="getMap#()Ljava/util/Map;" />
+      <node id="5664386848458679105" at="20,0,24,0" concept="10" trace="addQuestion#(Ljava/lang/String;)V" />
+      <node id="5664386848457890685" at="27,0,31,0" concept="10" trace="addToMap#(Ljava/lang/String;)V" />
+      <node id="5664386848458619423" at="37,60,41,5" concept="11" />
+      <node id="5664386848457926971" at="34,0,44,0" concept="10" trace="convertAnswerToInt#(Ljava/lang/String;)I" />
+      <scope id="5664386848458620353" at="40,33,40,33" />
+      <scope id="4815033423051921017" at="17,41,18,26" />
+      <scope id="4815033423051397163" at="24,51,25,35" />
+      <scope id="5664386848457899665" at="31,30,32,21" />
+      <scope id="5664386848458619425" at="38,9,39,45" />
+      <scope id="5664386848458620350" at="40,5,41,5">
+        <var name="e" id="5664386848458620351" />
+      </scope>
+      <scope id="5664386848458679108" at="20,53,22,25" />
+      <scope id="5664386848457890688" at="27,50,29,38">
+        <var name="answer" id="5664386848458633978" />
+      </scope>
+      <scope id="4815033423051921014" at="17,0,20,0" />
+      <scope id="4815033423051397161" at="24,0,27,0">
+        <var name="expression" id="4815033423051397171" />
+      </scope>
+      <scope id="5664386848457899662" at="31,0,34,0" />
+      <scope id="5664386848458679105" at="20,0,24,0">
+        <var name="expression" id="5664386848458679630" />
+      </scope>
+      <scope id="5664386848457890685" at="27,0,31,0">
+        <var name="expression" id="5664386848457890875" />
+      </scope>
+      <scope id="5664386848457926974" at="34,59,42,18">
+        <var name="answer" id="5664386848458622784" />
+        <var name="engine" id="5664386848458616835" />
+        <var name="mgr" id="5664386848458615760" />
+      </scope>
+      <scope id="5664386848457926971" at="34,0,44,0">
+        <var name="expression" id="5664386848457927380" />
+      </scope>
+      <unit id="4815033423052529596" at="13,0,45,0" name="Engine.runtime.Questions" />
+    </file>
+  </root>
+  <root nodeRef="r:6f804175-74c8-45d4-becb-2a8488971bc5(Engine.runtime)/5664386848458761563">
+    <file name="MyScreen.java">
+      <node id="5664386848458805581" at="16,0,17,0" concept="9" trace="answer" />
+      <node id="5664386848458765676" at="18,0,19,0" concept="3" trace="nifty" />
+      <node id="5664386848458767202" at="19,0,20,0" concept="3" trace="app" />
+      <node id="5664386848458768219" at="20,0,21,0" concept="3" trace="screen" />
+      <node id="5664386848458789283" at="23,44,24,33" concept="2" />
+      <node id="5664386848458791934" at="26,26,27,15" concept="2" />
+      <node id="5664386848459639576" at="29,45,30,21" concept="2" />
+      <node id="5664386848458794713" at="33,9,34,96" concept="6" />
+      <node id="5664386848458797910" at="34,96,35,60" concept="6" />
+      <node id="5664386848460651856" at="36,32,37,25" concept="2" />
+      <node id="5664386848458844779" at="37,25,38,22" concept="2" />
+      <node id="5664386848458845244" at="38,22,39,37" concept="2" />
+      <node id="5664386848459469144" at="40,14,41,22" concept="2" />
+      <node id="5664386848458848969" at="41,22,42,22" concept="2" />
+      <node id="5664386848459475140" at="44,62,45,20" concept="2" />
+      <node id="5664386848458855353" at="45,20,46,20" concept="2" />
+      <node id="5664386848458819649" at="50,9,51,73" concept="6" />
+      <node id="5664386848458821721" at="51,73,52,107" concept="2" />
+      <node id="5664386848460649683" at="52,107,53,0" concept="8" />
+      <node id="5664386848458831346" at="53,0,54,77" concept="6" />
+      <node id="5664386848458834811" at="54,77,55,108" concept="2" />
+      <node id="5664386848460521927" at="55,108,56,0" concept="8" />
+      <node id="5664386848458830549" at="58,5,59,0" concept="8" />
+      <node id="5664386848458856110" at="62,48,63,23" concept="2" />
+      <node id="5664386848458859067" at="63,23,64,25" concept="2" />
+      <node id="5664386848458787463" at="21,0,23,0" concept="1" trace="MyScreen#()V" />
+      <node id="5664386848458788499" at="23,0,26,0" concept="5" trace="startGame#(Ljava/lang/String;)V" />
+      <node id="5664386848458791533" at="26,0,29,0" concept="5" trace="quitGame#()V" />
+      <node id="5664386848459637657" at="29,0,32,0" concept="10" trace="setAnswer#(I)V" />
+      <node id="5664386848458846542" at="40,12,43,7" concept="0" />
+      <node id="5664386848458763488" at="66,0,69,0" concept="5" trace="onStartScreen#()V" />
+      <node id="5664386848458763831" at="69,0,72,0" concept="5" trace="onEndScreen#()V" />
+      <node id="5664386848458762747" at="61,0,66,0" concept="5" trace="bind#(Lde/lessvoid/nifty/Nifty;Lde/lessvoid/nifty/screen/Screen;)V" />
+      <node id="5664386848458799557" at="35,60,43,7" concept="4" />
+      <node id="5664386848460521926" at="49,29,58,5" concept="11" />
+      <node id="5664386848458818990" at="49,0,61,0" concept="5" trace="updateStats#()V" />
+      <node id="5664386848458794614" at="32,41,47,5" concept="11" />
+      <node id="5664386848458793594" at="32,0,49,0" concept="5" trace="submit#(Ljava/lang/String;)V" />
+      <scope id="5664386848458787467" at="21,21,21,21" />
+      <scope id="5664386848460529767" at="57,38,57,38" />
+      <scope id="5664386848458763494" at="67,31,67,31" />
+      <scope id="5664386848458763837" at="70,29,70,29" />
+      <scope id="5664386848458788502" at="23,44,24,33" />
+      <scope id="5664386848458791536" at="26,26,27,15" />
+      <scope id="5664386848459637660" at="29,45,30,21" />
+      <scope id="5664386848460529764" at="57,5,58,5">
+        <var name="e" id="5664386848460529765" />
+      </scope>
+      <scope id="5664386848458787463" at="21,0,23,0" />
+      <scope id="5664386848458846543" at="40,14,42,22" />
+      <scope id="5664386848458849374" at="44,62,46,20" />
+      <scope id="5664386848458762759" at="62,48,64,25" />
+      <scope id="5664386848458788499" at="23,0,26,0">
+        <var name="nextScreen" id="5664386848458788803" />
+      </scope>
+      <scope id="5664386848458791533" at="26,0,29,0" />
+      <scope id="5664386848459637657" at="29,0,32,0">
+        <var name="answer1" id="5664386848459638907" />
+      </scope>
+      <scope id="5664386848458799559" at="36,32,39,37" />
+      <scope id="5664386848458849371" at="44,5,47,5">
+        <var name="e" id="5664386848458849372" />
+      </scope>
+      <scope id="5664386848458763488" at="66,0,69,0" />
+      <scope id="5664386848458763831" at="69,0,72,0" />
+      <scope id="5664386848458762747" at="61,0,66,0">
+        <var name="nifty" id="5664386848458762751" />
+        <var name="screen" id="5664386848458762754" />
+      </scope>
+      <scope id="5664386848460521928" at="50,9,56,0">
+        <var name="element" id="5664386848458819650" />
+        <var name="element1" id="5664386848458831347" />
+      </scope>
+      <scope id="5664386848458794615" at="33,9,43,7">
+        <var name="input" id="5664386848458794714" />
+        <var name="inputText" id="5664386848458797913" />
+      </scope>
+      <scope id="5664386848458818993" at="49,29,59,0" />
+      <scope id="5664386848458818990" at="49,0,61,0" />
+      <scope id="5664386848458793597" at="32,41,47,5" />
+      <scope id="5664386848458793594" at="32,0,49,0">
+        <var name="nextScreen" id="5664386848458794071" />
+      </scope>
+      <unit id="5664386848458761563" at="14,0,74,0" name="Engine.runtime.MyScreen" />
+    </file>
+  </root>
+  <root nodeRef="r:6f804175-74c8-45d4-becb-2a8488971bc5(Engine.runtime)/5664386848459449894">
+    <file name="Stats.java">
+      <node id="5664386848459450243" at="7,0,8,0" concept="9" trace="lives" />
+      <node id="5664386848459450498" at="8,0,9,0" concept="9" trace="score" />
+      <node id="5664386848460905924" at="9,0,10,0" concept="9" trace="bonus" />
+      <node id="5664386848460642296" at="11,33,12,26" concept="2" />
+      <node id="5664386848460642225" at="11,0,14,0" concept="10" trace="addScore#()V" />
+      <scope id="5664386848460642228" at="11,33,12,26" />
+      <scope id="5664386848460642225" at="11,0,14,0" />
+      <unit id="5664386848459449894" at="6,0,15,0" name="Engine.runtime.Stats" />
+    </file>
+  </root>
+</debug-info>
+

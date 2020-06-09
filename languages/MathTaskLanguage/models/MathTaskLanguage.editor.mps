@@ -7,7 +7,6 @@
   </languages>
   <imports>
     <import index="395o" ref="r:9ac3cf75-eaf9-4197-b625-5018f60fefe6(MathTaskLanguage.structure)" implicit="true" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -47,12 +46,6 @@
   <node concept="24kQdi" id="4birQcq$kcg">
     <ref role="1XX52x" to="395o:4birQcq$kbk" resolve="Questions" />
     <node concept="3EZMnI" id="4birQcq$kci" role="2wV5jI">
-      <node concept="3F0ifn" id="4birQcq$kcp" role="3EZMnx">
-        <property role="3F0ifm" value="Questions " />
-      </node>
-      <node concept="3F0A7n" id="4birQcq$kcv" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
       <node concept="3F2HdR" id="4birQcq$kcG" role="3EZMnx">
         <ref role="1NtTu8" to="395o:4birQcq$kbn" resolve="question" />
         <node concept="l2Vlx" id="4birQcq$kcI" role="2czzBx" />

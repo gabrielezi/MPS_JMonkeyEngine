@@ -89,6 +89,17 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="35HoNQ" id="4UrWtfl7XaN" role="3EZMnx">
+        <node concept="pVoyu" id="4UrWtfl7Xbb" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4UrWtfl78GF" role="3EZMnx">
+        <property role="3F0ifm" value="Walls:" />
+        <node concept="pVoyu" id="4UrWtfl78GY" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F2HdR" id="3SDYViY$hMl" role="3EZMnx">
         <ref role="1NtTu8" to="kg6m:3SDYViY$hJK" resolve="walls" />
         <node concept="l2Vlx" id="3SDYViY$hMn" role="2czzBx" />
@@ -100,6 +111,12 @@
         </node>
       </node>
       <node concept="35HoNQ" id="4UrWtfkV1U1" role="3EZMnx" />
+      <node concept="3F0ifn" id="4UrWtfl7qHB" role="3EZMnx">
+        <property role="3F0ifm" value="Questions:" />
+        <node concept="pVoyu" id="4UrWtfl7qHW" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F1sOY" id="3HtjnVyKwNc" role="3EZMnx">
         <ref role="1NtTu8" to="kg6m:3HtjnVyK6_4" resolve="questions" />
         <node concept="pVoyu" id="3HtjnVyKwNn" role="3F10Kt">
