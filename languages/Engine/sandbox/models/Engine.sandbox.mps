@@ -43,6 +43,10 @@
         <child id="5664386848460926880" name="lives" index="2qsTTN" />
         <child id="5664386848460926885" name="score" index="2qsTTQ" />
         <child id="4277660428437317956" name="questions" index="3pBigU" />
+        <child id="4902881497097267366" name="character" index="3YmY0o" />
+      </concept>
+      <concept id="4902881497097107400" name="Engine.structure.MainCharacter" flags="ng" index="3Yh7XQ">
+        <property id="4902881497097238849" name="create" index="3YmB7Z" />
       </concept>
     </language>
   </registry>
@@ -174,6 +178,9 @@
     </node>
     <node concept="2qv1wv" id="4UrWtfkUlX9" role="2qsTTN">
       <property role="2qv1Jg" value="6" />
+    </node>
+    <node concept="3Yh7XQ" id="4gaybUUkNnR" role="3YmY0o">
+      <property role="3YmB7Z" value="true" />
     </node>
   </node>
 </model>

@@ -291,6 +291,12 @@
         <ref role="v9R2y" node="3SDYViYD6Bp" resolve="reduce_TerrainSize" />
       </node>
     </node>
+    <node concept="3aamgX" id="4gaybUUkfAQ" role="3acgRq">
+      <ref role="30HIoZ" to="kg6m:4gaybUUjJv8" resolve="MainCharacter" />
+      <node concept="j$656" id="4gaybUUkfB0" role="1lVwrX">
+        <ref role="v9R2y" node="4gaybUUkfAY" resolve="reduce_MainCharacter" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="3bDohNwsp1y">
     <property role="TrG5h" value="map_GameScreen" />
@@ -873,9 +879,32 @@
                               </node>
                             </node>
                           </node>
-                          <node concept="3clFbF" id="3osPhDXJtXV" role="3cqZAp">
-                            <node concept="1rXfSq" id="3osPhDXJtXT" role="3clFbG">
-                              <ref role="37wK5l" node="3osPhDXJ4KK" resolve="createCharacter" />
+                          <node concept="3clFbF" id="4gaybUUkkzw" role="3cqZAp">
+                            <node concept="2OqwBi" id="4gaybUUklg2" role="3clFbG">
+                              <node concept="10M0yZ" id="4gaybUUkk_n" role="2Oq$k0">
+                                <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+                                <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+                              </node>
+                              <node concept="liA8E" id="4gaybUUkm2W" role="2OqNvi">
+                                <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String)" resolve="println" />
+                                <node concept="Xl_RD" id="4gaybUUkm9o" role="37wK5m">
+                                  <property role="Xl_RC" value="createCharacter" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="29HgVG" id="4gaybUUkV0Z" role="lGtFl">
+                              <node concept="3NFfHV" id="4gaybUUkV10" role="3NFExx">
+                                <node concept="3clFbS" id="4gaybUUkV11" role="2VODD2">
+                                  <node concept="3clFbF" id="4gaybUUkV17" role="3cqZAp">
+                                    <node concept="2OqwBi" id="4gaybUUkV12" role="3clFbG">
+                                      <node concept="3TrEf2" id="4gaybUUkV15" role="2OqNvi">
+                                        <ref role="3Tt5mk" to="kg6m:4gaybUUkmyA" resolve="character" />
+                                      </node>
+                                      <node concept="30H73N" id="4gaybUUkV16" role="2Oq$k0" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
                             </node>
                           </node>
                           <node concept="3clFbF" id="3osPhDXJF00" role="3cqZAp">
@@ -4584,6 +4613,53 @@
       </node>
       <node concept="3Tm1VV" id="3SDYViYD6BY" role="1B3o_S" />
       <node concept="3uibUv" id="3SDYViYD6EL" role="1zkMxy">
+        <ref role="3uigEE" node="3bDohNwsp1y" resolve="map_GameScreen" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4gaybUUkfAY">
+    <property role="TrG5h" value="reduce_MainCharacter" />
+    <ref role="3gUMe" to="kg6m:4gaybUUjJv8" resolve="MainCharacter" />
+    <node concept="312cEu" id="4gaybUUkfB3" role="13RCb5">
+      <property role="TrG5h" value="Class" />
+      <node concept="3clFb_" id="4gaybUUkfC9" role="jymVt">
+        <property role="TrG5h" value="process" />
+        <node concept="3clFbS" id="4gaybUUkfCc" role="3clF47">
+          <node concept="3clFbJ" id="4gaybUUki6I" role="3cqZAp">
+            <node concept="3clFbT" id="4gaybUUki8C" role="3clFbw">
+              <property role="3clFbU" value="true" />
+              <node concept="17Uvod" id="4gaybUUkiaD" role="lGtFl">
+                <property role="2qtEX9" value="value" />
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123137/1068580123138" />
+                <node concept="3zFVjK" id="4gaybUUkiaG" role="3zH0cK">
+                  <node concept="3clFbS" id="4gaybUUkiaH" role="2VODD2">
+                    <node concept="3clFbF" id="4gaybUUkiaN" role="3cqZAp">
+                      <node concept="2OqwBi" id="4gaybUUkiaI" role="3clFbG">
+                        <node concept="3TrcHB" id="4gaybUUkiaL" role="2OqNvi">
+                          <ref role="3TsBF5" to="kg6m:4gaybUUkf_1" resolve="create" />
+                        </node>
+                        <node concept="30H73N" id="4gaybUUkiaM" role="2Oq$k0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="4gaybUUki6K" role="3clFbx">
+              <node concept="3clFbF" id="4gaybUUkile" role="3cqZAp">
+                <node concept="1rXfSq" id="4gaybUUkild" role="3clFbG">
+                  <ref role="37wK5l" node="3osPhDXJ4KK" resolve="createCharacter" />
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="4gaybUUkimq" role="lGtFl" />
+          </node>
+        </node>
+        <node concept="3Tm6S6" id="4gaybUUkfBE" role="1B3o_S" />
+        <node concept="3cqZAl" id="4gaybUUkfBY" role="3clF45" />
+      </node>
+      <node concept="3Tm1VV" id="4gaybUUkfB4" role="1B3o_S" />
+      <node concept="3uibUv" id="4gaybUUkfCR" role="1zkMxy">
         <ref role="3uigEE" node="3bDohNwsp1y" resolve="map_GameScreen" />
       </node>
     </node>

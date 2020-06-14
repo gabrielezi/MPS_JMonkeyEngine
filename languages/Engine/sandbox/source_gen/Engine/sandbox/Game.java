@@ -142,7 +142,9 @@ public class Game extends SimpleApplication implements ActionListener, PhysicsCo
         createWall(1, 3);
         createWall(1, 4);
         createWall(1, 5);
-        createCharacter();
+        if (true) {
+          createCharacter();
+        }
         setupChaseCamera();
         setupAnimationController();
 

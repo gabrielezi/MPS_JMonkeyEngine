@@ -91,6 +91,13 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="4onw:4UrWtfkTY_2" resolve="Score" />
     </node>
+    <node concept="1TJgyj" id="4gaybUUkmyA" role="1TKVEi">
+      <property role="IQ2ns" value="4902881497097267366" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="character" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4gaybUUjJv8" resolve="MainCharacter" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3osPhDXLo1l">
     <property role="EcuMT" value="3899225687151968341" />
@@ -122,6 +129,16 @@
       <property role="IQ2nx" value="4479388058107466515" />
       <property role="TrG5h" value="length" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4gaybUUjJv8">
+    <property role="EcuMT" value="4902881497097107400" />
+    <property role="TrG5h" value="MainCharacter" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="4gaybUUkf_1" role="1TKVEl">
+      <property role="IQ2nx" value="4902881497097238849" />
+      <property role="TrG5h" value="create" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
 </model>

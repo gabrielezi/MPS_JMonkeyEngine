@@ -10,12 +10,14 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
   public static final int GameScreen = 0;
-  public static final int TerrainSize = 1;
-  public static final int Wall = 2;
+  public static final int MainCharacter = 1;
+  public static final int TerrainSize = 2;
+  public static final int Wall = 3;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL);
     builder.put(0x32e9611ce0719032L, GameScreen);
+    builder.put(0x440a88beba4ef7c8L, MainCharacter);
     builder.put(0x3e29fbb4be9b80d1L, TerrainSize);
     builder.put(0x361cd51a7dc58055L, Wall);
     myIndex = builder.seal();

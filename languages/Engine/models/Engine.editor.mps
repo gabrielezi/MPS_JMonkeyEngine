@@ -89,6 +89,12 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F1sOY" id="4gaybUUkmyH" role="3EZMnx">
+        <ref role="1NtTu8" to="kg6m:4gaybUUkmyA" resolve="character" />
+        <node concept="pVoyu" id="4gaybUUkmz6" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="35HoNQ" id="4UrWtfl7XaN" role="3EZMnx">
         <node concept="pVoyu" id="4UrWtfl7Xbb" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -145,6 +151,18 @@
         <ref role="1NtTu8" to="kg6m:3SDYViYBPcj" resolve="length" />
       </node>
       <node concept="l2Vlx" id="3SDYViYBPcQ" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4gaybUUkf$P">
+    <ref role="1XX52x" to="kg6m:4gaybUUjJv8" resolve="MainCharacter" />
+    <node concept="3EZMnI" id="4gaybUUkf$R" role="2wV5jI">
+      <node concept="3F0ifn" id="4gaybUUkf$Y" role="3EZMnx">
+        <property role="3F0ifm" value="create character: " />
+      </node>
+      <node concept="3F0A7n" id="4gaybUUkfAn" role="3EZMnx">
+        <ref role="1NtTu8" to="kg6m:4gaybUUkf_1" resolve="create" />
+      </node>
+      <node concept="l2Vlx" id="4gaybUUkf$U" role="2iSdaV" />
     </node>
   </node>
 </model>

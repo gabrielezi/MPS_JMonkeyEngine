@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="c8g6ekagtzbb5y5ijsbtvsrh8xbqxzl">
-  <files names="EditorAspectDescriptorImpl.java:GameScreen_Editor.java:GameScreen_EditorBuilder_a.java:TerrainSize_Editor.java:TerrainSize_EditorBuilder_a.java:Wall_Editor.java:Wall_EditorBuilder_a.java" />
+<product version="3" modelHash="5wvx17c5whdnvjvuybefdk84fr641vk">
+  <files names="EditorAspectDescriptorImpl.java:GameScreen_Editor.java:GameScreen_EditorBuilder_a.java:MainCharacter_Editor.java:MainCharacter_EditorBuilder_a.java:TerrainSize_Editor.java:TerrainSize_EditorBuilder_a.java:Wall_Editor.java:Wall_EditorBuilder_a.java" />
 </product>
 

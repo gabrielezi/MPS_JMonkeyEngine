@@ -14,6 +14,7 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptGameScreen = createDescriptorForGameScreen();
+  /*package*/ final ConceptDescriptor myConceptMainCharacter = createDescriptorForMainCharacter();
   /*package*/ final ConceptDescriptor myConceptTerrainSize = createDescriptorForTerrainSize();
   /*package*/ final ConceptDescriptor myConceptWall = createDescriptorForWall();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -32,7 +33,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptGameScreen, myConceptTerrainSize, myConceptWall);
+    return Arrays.asList(myConceptGameScreen, myConceptMainCharacter, myConceptTerrainSize, myConceptWall);
   }
 
   @Override
@@ -41,6 +42,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.GameScreen:
         return myConceptGameScreen;
+      case LanguageConceptSwitch.MainCharacter:
+        return myConceptMainCharacter;
       case LanguageConceptSwitch.TerrainSize:
         return myConceptTerrainSize;
       case LanguageConceptSwitch.Wall:
@@ -67,6 +70,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("questions", 0x3b5d4d7ee2c06944L).target(0x8fbac3a785ba48f9L, 0x88458d9d85fd4680L, 0x42d26f631a9142d4L).optional(false).ordered(true).multiple(false).origin("4277660428437317956").done();
     b.aggregate("lives", 0x4e9bf1d3d4e86fa0L).target(0x23c152072b1c47e1L, 0xb53641908a833633L, 0x4e9bf1d3d4e7e9ccL).optional(false).ordered(true).multiple(false).origin("5664386848460926880").done();
     b.aggregate("score", 0x4e9bf1d3d4e86fa5L).target(0x23c152072b1c47e1L, 0xb53641908a833633L, 0x4e9bf1d3d4e7e942L).optional(false).ordered(true).multiple(false).origin("5664386848460926885").done();
+    b.aggregate("character", 0x440a88beba5168a6L).target(0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x440a88beba4ef7c8L).optional(false).ordered(true).multiple(false).origin("4902881497097267366").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForMainCharacter() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Engine", "MainCharacter", 0x1d3f8ae84176495bL, 0xa86586bf89ca816cL, 0x440a88beba4ef7c8L);
+    b.class_(false, false, false);
+    b.origin("r:81172e8e-82d2-4218-ae57-67b41c3914cc(Engine.structure)/4902881497097107400");
+    b.version(2);
+    b.property("create", 0x440a88beba50f941L).type(PrimitiveTypeId.BOOLEAN).origin("4902881497097238849").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTerrainSize() {

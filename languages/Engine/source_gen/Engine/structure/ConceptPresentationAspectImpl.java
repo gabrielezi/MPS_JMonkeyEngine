@@ -10,6 +10,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_GameScreen;
+  private ConceptPresentation props_MainCharacter;
   private ConceptPresentation props_TerrainSize;
   private ConceptPresentation props_Wall;
 
@@ -25,6 +26,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GameScreen = cpb.create();
         }
         return props_GameScreen;
+      case LanguageConceptSwitch.MainCharacter:
+        if (props_MainCharacter == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("MainCharacter");
+          props_MainCharacter = cpb.create();
+        }
+        return props_MainCharacter;
       case LanguageConceptSwitch.TerrainSize:
         if (props_TerrainSize == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
